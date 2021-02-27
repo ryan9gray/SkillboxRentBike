@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C0525EA5F14000BE950 /* AppDelegate.swift */; };
+		25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0B25EA5F14000BE950 /* Main.storyboard */; };
+		25203C0F25EA5F16000BE950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0E25EA5F16000BE950 /* Assets.xcassets */; };
+		25203C1225EA5F16000BE950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25203C1025EA5F16000BE950 /* LaunchScreen.storyboard */; };
+		25203C1D25EA5F16000BE950 /* RentBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C1C25EA5F16000BE950 /* RentBikeTests.swift */; };
+		25203C2825EA5F16000BE950 /* RentBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C2725EA5F16000BE950 /* RentBikeUITests.swift */; };
+		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25203C1925EA5F16000BE950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25203BFA25EA5F14000BE950 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25203C0125EA5F14000BE950;
+			remoteInfo = RentBike;
+		};
+		25203C2425EA5F16000BE950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25203BFA25EA5F14000BE950 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25203C0125EA5F14000BE950;
+			remoteInfo = RentBike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25203C0225EA5F14000BE950 /* RentBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25203C0525EA5F14000BE950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25203C0C25EA5F14000BE950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25203C0E25EA5F16000BE950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25203C1125EA5F16000BE950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25203C1325EA5F16000BE950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25203C1825EA5F16000BE950 /* RentBikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RentBikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25203C1C25EA5F16000BE950 /* RentBikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentBikeTests.swift; sourceTree = "<group>"; };
+		25203C1E25EA5F16000BE950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25203C2325EA5F16000BE950 /* RentBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RentBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25203C2725EA5F16000BE950 /* RentBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentBikeUITests.swift; sourceTree = "<group>"; };
+		25203C2925EA5F16000BE950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
+		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
+		AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25203BFF25EA5F14000BE950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25203C1525EA5F16000BE950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25203C2025EA5F16000BE950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25203BF925EA5F14000BE950 = {
+			isa = PBXGroup;
+			children = (
+				25203C0425EA5F14000BE950 /* RentBike */,
+				25203C1B25EA5F16000BE950 /* RentBikeTests */,
+				25203C2625EA5F16000BE950 /* RentBikeUITests */,
+				25203C0325EA5F14000BE950 /* Products */,
+				828F9BB28F3F5809FE637667 /* Pods */,
+				91FC13F5D1DDC4A1EDDC8317 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		25203C0325EA5F14000BE950 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25203C0225EA5F14000BE950 /* RentBike.app */,
+				25203C1825EA5F16000BE950 /* RentBikeTests.xctest */,
+				25203C2325EA5F16000BE950 /* RentBikeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25203C0425EA5F14000BE950 /* RentBike */ = {
+			isa = PBXGroup;
+			children = (
+				25203C0525EA5F14000BE950 /* AppDelegate.swift */,
+				25203C0B25EA5F14000BE950 /* Main.storyboard */,
+				25203C4725EA5FE2000BE950 /* Resource */,
+				25203C1025EA5F16000BE950 /* LaunchScreen.storyboard */,
+			);
+			path = RentBike;
+			sourceTree = "<group>";
+		};
+		25203C1B25EA5F16000BE950 /* RentBikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				25203C1C25EA5F16000BE950 /* RentBikeTests.swift */,
+				25203C1E25EA5F16000BE950 /* Info.plist */,
+			);
+			path = RentBikeTests;
+			sourceTree = "<group>";
+		};
+		25203C2625EA5F16000BE950 /* RentBikeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				25203C2725EA5F16000BE950 /* RentBikeUITests.swift */,
+				25203C2925EA5F16000BE950 /* Info.plist */,
+			);
+			path = RentBikeUITests;
+			sourceTree = "<group>";
+		};
+		25203C4725EA5FE2000BE950 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				25203C0E25EA5F16000BE950 /* Assets.xcassets */,
+				25203C1325EA5F16000BE950 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		828F9BB28F3F5809FE637667 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */,
+				2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		91FC13F5D1DDC4A1EDDC8317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25203C0125EA5F14000BE950 /* RentBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25203C2C25EA5F16000BE950 /* Build configuration list for PBXNativeTarget "RentBike" */;
+			buildPhases = (
+				5A0C413B28A0F6D751FB8771 /* [CP] Check Pods Manifest.lock */,
+				25203BFE25EA5F14000BE950 /* Sources */,
+				25203BFF25EA5F14000BE950 /* Frameworks */,
+				25203C0025EA5F14000BE950 /* Resources */,
+				424BE2D17FA9510C9981464C /* [CP] Embed Pods Frameworks */,
+				288785C036D706B84EABF6A0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RentBike;
+			productName = RentBike;
+			productReference = 25203C0225EA5F14000BE950 /* RentBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25203C1725EA5F16000BE950 /* RentBikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25203C2F25EA5F16000BE950 /* Build configuration list for PBXNativeTarget "RentBikeTests" */;
+			buildPhases = (
+				25203C1425EA5F16000BE950 /* Sources */,
+				25203C1525EA5F16000BE950 /* Frameworks */,
+				25203C1625EA5F16000BE950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25203C1A25EA5F16000BE950 /* PBXTargetDependency */,
+			);
+			name = RentBikeTests;
+			productName = RentBikeTests;
+			productReference = 25203C1825EA5F16000BE950 /* RentBikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		25203C2225EA5F16000BE950 /* RentBikeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25203C3225EA5F16000BE950 /* Build configuration list for PBXNativeTarget "RentBikeUITests" */;
+			buildPhases = (
+				25203C1F25EA5F16000BE950 /* Sources */,
+				25203C2025EA5F16000BE950 /* Frameworks */,
+				25203C2125EA5F16000BE950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25203C2525EA5F16000BE950 /* PBXTargetDependency */,
+			);
+			name = RentBikeUITests;
+			productName = RentBikeUITests;
+			productReference = 25203C2325EA5F16000BE950 /* RentBikeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25203BFA25EA5F14000BE950 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					25203C0125EA5F14000BE950 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					25203C1725EA5F16000BE950 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 25203C0125EA5F14000BE950;
+					};
+					25203C2225EA5F16000BE950 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 25203C0125EA5F14000BE950;
+					};
+				};
+			};
+			buildConfigurationList = 25203BFD25EA5F14000BE950 /* Build configuration list for PBXProject "RentBike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25203BF925EA5F14000BE950;
+			productRefGroup = 25203C0325EA5F14000BE950 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25203C0125EA5F14000BE950 /* RentBike */,
+				25203C1725EA5F16000BE950 /* RentBikeTests */,
+				25203C2225EA5F16000BE950 /* RentBikeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25203C0025EA5F14000BE950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25203C1225EA5F16000BE950 /* LaunchScreen.storyboard in Resources */,
+				25203C0F25EA5F16000BE950 /* Assets.xcassets in Resources */,
+				25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25203C1625EA5F16000BE950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25203C2125EA5F16000BE950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		288785C036D706B84EABF6A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RentBike/Pods-RentBike-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RentBike/Pods-RentBike-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RentBike/Pods-RentBike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		424BE2D17FA9510C9981464C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RentBike/Pods-RentBike-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RentBike/Pods-RentBike-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RentBike/Pods-RentBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A0C413B28A0F6D751FB8771 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RentBike-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25203BFE25EA5F14000BE950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25203C1425EA5F16000BE950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25203C1D25EA5F16000BE950 /* RentBikeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25203C1F25EA5F16000BE950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25203C2825EA5F16000BE950 /* RentBikeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25203C1A25EA5F16000BE950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25203C0125EA5F14000BE950 /* RentBike */;
+			targetProxy = 25203C1925EA5F16000BE950 /* PBXContainerItemProxy */;
+		};
+		25203C2525EA5F16000BE950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25203C0125EA5F14000BE950 /* RentBike */;
+			targetProxy = 25203C2425EA5F16000BE950 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		25203C0B25EA5F14000BE950 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25203C0C25EA5F14000BE950 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		25203C1025EA5F16000BE950 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25203C1125EA5F16000BE950 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25203C2A25EA5F16000BE950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		25203C2B25EA5F16000BE950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25203C2D25EA5F16000BE950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
+				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.rent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		25203C2E25EA5F16000BE950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
+				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.rent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		25203C3025EA5F16000BE950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
+				INFOPLIST_FILE = RentBikeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.RentBikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RentBike.app/RentBike";
+			};
+			name = Debug;
+		};
+		25203C3125EA5F16000BE950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
+				INFOPLIST_FILE = RentBikeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.RentBikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RentBike.app/RentBike";
+			};
+			name = Release;
+		};
+		25203C3325EA5F16000BE950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
+				INFOPLIST_FILE = RentBikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.RentBikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RentBike;
+			};
+			name = Debug;
+		};
+		25203C3425EA5F16000BE950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
+				INFOPLIST_FILE = RentBikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.RentBikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RentBike;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25203BFD25EA5F14000BE950 /* Build configuration list for PBXProject "RentBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25203C2A25EA5F16000BE950 /* Debug */,
+				25203C2B25EA5F16000BE950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25203C2C25EA5F16000BE950 /* Build configuration list for PBXNativeTarget "RentBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25203C2D25EA5F16000BE950 /* Debug */,
+				25203C2E25EA5F16000BE950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25203C2F25EA5F16000BE950 /* Build configuration list for PBXNativeTarget "RentBikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25203C3025EA5F16000BE950 /* Debug */,
+				25203C3125EA5F16000BE950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25203C3225EA5F16000BE950 /* Build configuration list for PBXNativeTarget "RentBikeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25203C3325EA5F16000BE950 /* Debug */,
+				25203C3425EA5F16000BE950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25203BFA25EA5F14000BE950 /* Project object */;
+}
