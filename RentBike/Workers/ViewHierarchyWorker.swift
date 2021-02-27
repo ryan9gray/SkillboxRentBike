@@ -39,7 +39,7 @@ struct ViewHierarchyWorker {
             }
             guard isAlreadyReseted() else { return }
             
-			let controller = ApplicationFlow.shared.mainTabBarController()
+			let controller = ApplicationFlow.shared.mainController()
             ViewHierarchyWorker.setRootViewController(controller)
         }
     }
@@ -48,10 +48,8 @@ struct ViewHierarchyWorker {
 enum StoryboardWorker: String {
     case autorization =         "Auth"
     case main =                 "Main"
-    case feed =                 "Feed"
+    case map =                 "Map"
     case profile =              "Profile"
-    case basket =               "Basket"
-    case discount =              "Discount"
 
 
 

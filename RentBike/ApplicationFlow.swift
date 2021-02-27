@@ -13,15 +13,10 @@ class ApplicationFlow {
 	private init() { }
 
     let profileFlow = ProfileFlow()
-    let feedFlow = FeedFlow()
-    let basketFlow = BasketFlow()
-    let discountFlow = DiscountFlow()
+    let mapFlow = MapFlow()
 
     func start() {
-        profileFlow.start()
-        feedFlow.start()
-        basketFlow.start()
-        discountFlow.start()
+        mapFlow.start()
 
 		//startMain()
 		if Profile.isAuthorized {
@@ -35,28 +30,9 @@ class ApplicationFlow {
 		ViewHierarchyWorker.resetAppForMain()
 	}
 
-    var tabBarController: MainTabBarController?
-
-    func mainTabBarController() -> MainTabBarController {
-        let tabBarController = MainTabBarController.instantiate(fromStoryboard: .main)
-
-        tabBarController.setViewControllers([
-            feedFlow.initialViewController,
-            profileFlow.initialViewController,
-            discountFlow.initialViewController,
-            basketFlow.initialViewController,
-        ], animated: false)
-
-		if #available(iOS 13.0, *) {
-			let appearance = UINavigationBarAppearance()
-			appearance.configureWithOpaqueBackground()
-			appearance.titleTextAttributes = [.foregroundColor: Style.Color.black]
-			tabBarController.viewControllers?.forEach({ controller in
-				controller.navigationController?.navigationBar.standardAppearance = appearance
-			})
-		}
-		self.tabBarController = tabBarController
-        return tabBarController
+    func mainController() -> UIViewController {
+        let vc = mapFlow.initialViewController
+        return vc
     }
 
     func showAlert(_ text: String) {

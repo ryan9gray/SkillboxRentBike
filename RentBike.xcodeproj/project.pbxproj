@@ -49,6 +49,10 @@
 		25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CBB25EA6503000BE950 /* SqliteCacher.swift */; };
 		25203CC325EA6503000BE950 /* SqliteCacher+MappableCacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CBC25EA6503000BE950 /* SqliteCacher+MappableCacherType.swift */; };
 		25203CC825EA655F000BE950 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CC725EA655F000BE950 /* Result.swift */; };
+		25203CD125EA8CC6000BE950 /* MapFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CD025EA8CC6000BE950 /* MapFlow.swift */; };
+		25203CD725EA8DAB000BE950 /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CD625EA8DAB000BE950 /* ProfileFlow.swift */; };
+		25203CDF25EA8DE0000BE950 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */; };
+		25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CE325EA8EE2000BE950 /* MapViewController.swift */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +122,10 @@
 		25203CBB25EA6503000BE950 /* SqliteCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteCacher.swift; sourceTree = "<group>"; };
 		25203CBC25EA6503000BE950 /* SqliteCacher+MappableCacherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SqliteCacher+MappableCacherType.swift"; sourceTree = "<group>"; };
 		25203CC725EA655F000BE950 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		25203CD025EA8CC6000BE950 /* MapFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFlow.swift; sourceTree = "<group>"; };
+		25203CD625EA8DAB000BE950 /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
+		25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		25203CE325EA8EE2000BE950 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
 		AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +290,7 @@
 		25203CAE25EA62BB000BE950 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				25203CD525EA8CCB000BE950 /* Main */,
 				25203CCC25EA65B0000BE950 /* Profile */,
 				25203C9125EA62B2000BE950 /* Auth */,
 			);
@@ -313,8 +322,19 @@
 		25203CCC25EA65B0000BE950 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				25203CD625EA8DAB000BE950 /* ProfileFlow.swift */,
+				25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		25203CD525EA8CCB000BE950 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				25203CD025EA8CC6000BE950 /* MapFlow.swift */,
+				25203CE325EA8EE2000BE950 /* MapViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		828F9BB28F3F5809FE637667 /* Pods */ = {
@@ -539,6 +559,7 @@
 				25203CA425EA62B2000BE950 /* AuthFlow.swift in Sources */,
 				25203C9F25EA62B2000BE950 /* SkyFloatingLabelTextField.swift in Sources */,
 				25203CA325EA62B2000BE950 /* AuthService.swift in Sources */,
+				25203CD725EA8DAB000BE950 /* ProfileFlow.swift in Sources */,
 				25203C7F25EA6262000BE950 /* Notification.swift in Sources */,
 				25203CC325EA6503000BE950 /* SqliteCacher+MappableCacherType.swift in Sources */,
 				25203CA925EA62B2000BE950 /* KeyboardBehavior.swift in Sources */,
@@ -547,6 +568,7 @@
 				25203CAA25EA62B2000BE950 /* FormKeyboardBehavior.swift in Sources */,
 				25203C8225EA6262000BE950 /* UIViewController.swift in Sources */,
 				25203C7E25EA6262000BE950 /* UITableViewCell.swift in Sources */,
+				25203CDF25EA8DE0000BE950 /* ProfileViewController.swift in Sources */,
 				25203CBF25EA6503000BE950 /* CacherType.swift in Sources */,
 				25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */,
 				25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */,
@@ -556,8 +578,10 @@
 				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
 				25203CC025EA6503000BE950 /* LocationCacher.swift in Sources */,
 				25203CA125EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */,
 				25203C9C25EA62B2000BE950 /* MainTabBarController.swift in Sources */,
 				25203C8125EA6262000BE950 /* UIImage.swift in Sources */,
+				25203CD125EA8CC6000BE950 /* MapFlow.swift in Sources */,
 				25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */,
 				25203C8025EA6262000BE950 /* String.swift in Sources */,
 				25203C7C25EA6262000BE950 /* Int.swift in Sources */,

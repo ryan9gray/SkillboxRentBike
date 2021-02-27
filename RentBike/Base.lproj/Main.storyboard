@@ -1,24 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3GH-da-Ww5"/>
+                        <viewControllerLayoutGuide type="bottom" id="WzF-3X-xof"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="y48-IC-xNP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-c0-lUk">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lt2-uM-5SP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Lt2-uM-5SP" secondAttribute="trailing" id="9n5-KR-X94"/>
+                                    <constraint firstItem="Lt2-uM-5SP" firstAttribute="top" secondItem="XBU-c0-lUk" secondAttribute="top" id="D1x-iD-udt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lt2-uM-5SP" secondAttribute="bottom" id="hDV-F9-OCX"/>
+                                    <constraint firstItem="Lt2-uM-5SP" firstAttribute="leading" secondItem="XBU-c0-lUk" secondAttribute="leading" id="qIL-ot-jol"/>
+                                    <constraint firstAttribute="height" constant="100" id="ys9-53-WD3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XBU-c0-lUk" secondAttribute="trailing" id="6Ou-Nd-dfB"/>
+                            <constraint firstAttribute="bottom" secondItem="y48-IC-xNP" secondAttribute="bottom" id="MGF-7a-noz"/>
+                            <constraint firstItem="XBU-c0-lUk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MKx-bL-Vf2"/>
+                            <constraint firstItem="y48-IC-xNP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nzt-Hg-yJm"/>
+                            <constraint firstItem="y48-IC-xNP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bNC-xA-t2L"/>
+                            <constraint firstAttribute="bottom" secondItem="XBU-c0-lUk" secondAttribute="bottom" id="cg8-br-FKe"/>
+                            <constraint firstAttribute="trailing" secondItem="y48-IC-xNP" secondAttribute="trailing" id="zFv-6x-9mH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-255.07246376811597" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
