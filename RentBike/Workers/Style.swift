@@ -3,13 +3,21 @@ import UIKit
 
 enum Style {
     enum Color {
-        static let carminePink      = UIColor(hex: "F43B3B")
-        static let black    		= UIColor.black
-		static let gray    			= UIColor(hex: "778D9A")
-        static let lightGray        = UIColor(hex: "F8F8F8")
-		static let loblolly    		= UIColor(hex: "BFCAD1")
-		static let blue    			= UIColor(hex: "3F8AE0")
-		static let mercury    		= UIColor(hex: "E5E5E5")
+        static let black            = UIColor.black
+
+        // Blue
+        static let regal      = UIColor(hex: "203d54")
+        static let midnight      = UIColor(hex: "1a4971")
+        static let matisse      = UIColor(hex: "2368a2")
+        static let tufts      = UIColor(hex: "3183c8")
+        static let picton      = UIColor(hex: "63a2d8")
+        static let pale      = UIColor(hex: "aad4f5")
+        static let alice      = UIColor(hex: "eff8ff")
+
+		// Gray
+        static let nevada           = UIColor(hex: "5f6b7a")
+        static let lightGray        = UIColor(hex: "cfd6de")
+
     }
 
     enum Font {
@@ -51,11 +59,11 @@ enum Style {
 		]
         static let tabSelected: [NSAttributedString.Key: Any] = [
             .font: Style.Font.main(size: 15),
-            .foregroundColor: Style.Color.carminePink
+            .foregroundColor: Style.Color.regal
         ]
 		static let grayRegular: [NSAttributedString.Key: Any] = [
 			.font: Style.Font.main(size: 13),
-			.foregroundColor: Style.Color.gray
+			.foregroundColor: Style.Color.nevada
 		]
 		static let titleSemibold: [NSAttributedString.Key: Any] = [
 			.font: Style.Font.semibold(size: 17),
@@ -63,11 +71,11 @@ enum Style {
 		]
         static let agreementLink: [NSAttributedString.Key: Any] = [
             .font: Style.Font.main(size: 12),
-            .foregroundColor: Style.Color.carminePink
+            .foregroundColor: Style.Color.regal
         ]
         static let agreement: [NSAttributedString.Key: Any] = [
             .font: Style.Font.main(size: 12),
-            .foregroundColor: Style.Color.gray
+            .foregroundColor: Style.Color.nevada
         ]
         static func fontPicker(font: UIFont) -> [NSAttributedString.Key: Any] {
             [
@@ -165,7 +173,7 @@ extension NSMutableAttributedString {
         guard range.location != NSNotFound else {
             let exclamation = "\u{203C}\u{FE0F}"
             let alarm = "\(exclamation) \(string) is absent \(exclamation)"
-            let attributedAlarm = NSAttributedString(string: alarm, attributes: [ .foregroundColor: Style.Color.carminePink ])
+            let attributedAlarm = NSAttributedString(string: alarm, attributes: [ .foregroundColor: Style.Color.pale ])
             insert(attributedAlarm, at: 0)
             return
         }

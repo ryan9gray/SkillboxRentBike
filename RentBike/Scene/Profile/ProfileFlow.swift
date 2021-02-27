@@ -21,11 +21,6 @@ class ProfileFlow {
 
     func start() {
         initialViewController.setViewControllers([ createInitialViewController() ], animated: false)
-        initialViewController.tabBarItem = UITabBarItem(
-            title: "profile".localized,
-            image: nil,
-            selectedImage: nil
-        )
     }
 
     private func createInitialViewController() -> UIViewController {

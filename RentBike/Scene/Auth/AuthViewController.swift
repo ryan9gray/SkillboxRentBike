@@ -95,7 +95,7 @@ class AuthViewController: UIViewController {
         agreement.replace("{termsOfService}", with: "auth_agreement_terms".localized <~ termsOfServiceAttributes)
         agreement.replace("{privacyPolicy}", with: "auth_agreement_policy".localized <~ privacyPolicyAttributes)
         policyTextView.attributedText = agreement
-        policyTextView.linkTextAttributes = [.foregroundColor : Style.Color.carminePink]
+        policyTextView.linkTextAttributes = [.foregroundColor : Style.Color.pale]
     }
 }
 
