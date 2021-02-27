@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,42 @@
 		25203C1225EA5F16000BE950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25203C1025EA5F16000BE950 /* LaunchScreen.storyboard */; };
 		25203C1D25EA5F16000BE950 /* RentBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C1C25EA5F16000BE950 /* RentBikeTests.swift */; };
 		25203C2825EA5F16000BE950 /* RentBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C2725EA5F16000BE950 /* RentBikeUITests.swift */; };
+		25203C7A25EA6262000BE950 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C6E25EA6262000BE950 /* UIView.swift */; };
+		25203C7B25EA6262000BE950 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C6F25EA6262000BE950 /* UIColor.swift */; };
+		25203C7C25EA6262000BE950 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7025EA6262000BE950 /* Int.swift */; };
+		25203C7D25EA6262000BE950 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7125EA6262000BE950 /* UITableView.swift */; };
+		25203C7E25EA6262000BE950 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7225EA6262000BE950 /* UITableViewCell.swift */; };
+		25203C7F25EA6262000BE950 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7325EA6262000BE950 /* Notification.swift */; };
+		25203C8025EA6262000BE950 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7425EA6262000BE950 /* String.swift */; };
+		25203C8125EA6262000BE950 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7525EA6262000BE950 /* UIImage.swift */; };
+		25203C8225EA6262000BE950 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7625EA6262000BE950 /* UIViewController.swift */; };
+		25203C8325EA6262000BE950 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7725EA6262000BE950 /* UIWindow.swift */; };
+		25203C8425EA6262000BE950 /* UIImageView+SD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7825EA6262000BE950 /* UIImageView+SD.swift */; };
+		25203C8525EA6262000BE950 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C7925EA6262000BE950 /* UIApplication.swift */; };
+		25203C9C25EA62B2000BE950 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C8925EA62B2000BE950 /* MainTabBarController.swift */; };
+		25203C9D25EA62B2000BE950 /* ApplicationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C8A25EA62B2000BE950 /* ApplicationFlow.swift */; };
+		25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C8C25EA62B2000BE950 /* NetworkService.swift */; };
+		25203C9F25EA62B2000BE950 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C8E25EA62B2000BE950 /* SkyFloatingLabelTextField.swift */; };
+		25203CA025EA62B2000BE950 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C8F25EA62B2000BE950 /* UITextField+fixCaretPosition.swift */; };
+		25203CA125EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9025EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9225EA62B2000BE950 /* AuthViewController.swift */; };
+		25203CA325EA62B2000BE950 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9325EA62B2000BE950 /* AuthService.swift */; };
+		25203CA425EA62B2000BE950 /* AuthFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9425EA62B2000BE950 /* AuthFlow.swift */; };
+		25203CA525EA62B2000BE950 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9625EA62B2000BE950 /* NetworkManager.swift */; };
+		25203CA625EA62B2000BE950 /* ViewHierarchyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9725EA62B2000BE950 /* ViewHierarchyWorker.swift */; };
+		25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9825EA62B2000BE950 /* LocalStore.swift */; };
+		25203CA825EA62B2000BE950 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9925EA62B2000BE950 /* Style.swift */; };
+		25203CA925EA62B2000BE950 /* KeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9A25EA62B2000BE950 /* KeyboardBehavior.swift */; };
+		25203CAA25EA62B2000BE950 /* FormKeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C9B25EA62B2000BE950 /* FormKeyboardBehavior.swift */; };
+		25203CB125EA62EF000BE950 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CB025EA62EF000BE950 /* Profile.swift */; };
+		25203CBD25EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CB625EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift */; };
+		25203CBE25EA6503000BE950 /* AppCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CB725EA6503000BE950 /* AppCacher.swift */; };
+		25203CBF25EA6503000BE950 /* CacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CB825EA6503000BE950 /* CacherType.swift */; };
+		25203CC025EA6503000BE950 /* LocationCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CB925EA6503000BE950 /* LocationCacher.swift */; };
+		25203CC125EA6503000BE950 /* LogsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CBA25EA6503000BE950 /* LogsCacher.swift */; };
+		25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CBB25EA6503000BE950 /* SqliteCacher.swift */; };
+		25203CC325EA6503000BE950 /* SqliteCacher+MappableCacherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CBC25EA6503000BE950 /* SqliteCacher+MappableCacherType.swift */; };
+		25203CC825EA655F000BE950 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CC725EA655F000BE950 /* Result.swift */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +82,42 @@
 		25203C2325EA5F16000BE950 /* RentBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RentBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25203C2725EA5F16000BE950 /* RentBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentBikeUITests.swift; sourceTree = "<group>"; };
 		25203C2925EA5F16000BE950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25203C6E25EA6262000BE950 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		25203C6F25EA6262000BE950 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		25203C7025EA6262000BE950 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		25203C7125EA6262000BE950 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		25203C7225EA6262000BE950 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		25203C7325EA6262000BE950 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		25203C7425EA6262000BE950 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		25203C7525EA6262000BE950 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		25203C7625EA6262000BE950 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		25203C7725EA6262000BE950 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		25203C7825EA6262000BE950 /* UIImageView+SD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SD.swift"; sourceTree = "<group>"; };
+		25203C7925EA6262000BE950 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		25203C8925EA62B2000BE950 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		25203C8A25EA62B2000BE950 /* ApplicationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlow.swift; sourceTree = "<group>"; };
+		25203C8C25EA62B2000BE950 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		25203C8E25EA62B2000BE950 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		25203C8F25EA62B2000BE950 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		25203C9025EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		25203C9225EA62B2000BE950 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		25203C9325EA62B2000BE950 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		25203C9425EA62B2000BE950 /* AuthFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthFlow.swift; sourceTree = "<group>"; };
+		25203C9625EA62B2000BE950 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		25203C9725EA62B2000BE950 /* ViewHierarchyWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHierarchyWorker.swift; sourceTree = "<group>"; };
+		25203C9825EA62B2000BE950 /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		25203C9925EA62B2000BE950 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		25203C9A25EA62B2000BE950 /* KeyboardBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBehavior.swift; sourceTree = "<group>"; };
+		25203C9B25EA62B2000BE950 /* FormKeyboardBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormKeyboardBehavior.swift; sourceTree = "<group>"; };
+		25203CB025EA62EF000BE950 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		25203CB625EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SqliteCacher+ExirableCacherType.swift"; sourceTree = "<group>"; };
+		25203CB725EA6503000BE950 /* AppCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCacher.swift; sourceTree = "<group>"; };
+		25203CB825EA6503000BE950 /* CacherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacherType.swift; sourceTree = "<group>"; };
+		25203CB925EA6503000BE950 /* LocationCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCacher.swift; sourceTree = "<group>"; };
+		25203CBA25EA6503000BE950 /* LogsCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsCacher.swift; sourceTree = "<group>"; };
+		25203CBB25EA6503000BE950 /* SqliteCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteCacher.swift; sourceTree = "<group>"; };
+		25203CBC25EA6503000BE950 /* SqliteCacher+MappableCacherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SqliteCacher+MappableCacherType.swift"; sourceTree = "<group>"; };
+		25203CC725EA655F000BE950 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
 		AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +176,15 @@
 			children = (
 				25203C0525EA5F14000BE950 /* AppDelegate.swift */,
 				25203C0B25EA5F14000BE950 /* Main.storyboard */,
+				25203C8A25EA62B2000BE950 /* ApplicationFlow.swift */,
+				25203C8925EA62B2000BE950 /* MainTabBarController.swift */,
+				25203CAE25EA62BB000BE950 /* Scene */,
+				25203CB525EA6503000BE950 /* Store */,
+				25203C8B25EA62B2000BE950 /* Services */,
+				25203CAF25EA62EF000BE950 /* Models */,
+				25203C8D25EA62B2000BE950 /* View */,
+				25203C9525EA62B2000BE950 /* Workers */,
+				25203C6D25EA6262000BE950 /* Extensions */,
 				25203C4725EA5FE2000BE950 /* Resource */,
 				25203C1025EA5F16000BE950 /* LaunchScreen.storyboard */,
 			);
@@ -137,13 +218,111 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		25203C6D25EA6262000BE950 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				25203C6E25EA6262000BE950 /* UIView.swift */,
+				25203C6F25EA6262000BE950 /* UIColor.swift */,
+				25203C7025EA6262000BE950 /* Int.swift */,
+				25203C7125EA6262000BE950 /* UITableView.swift */,
+				25203C7225EA6262000BE950 /* UITableViewCell.swift */,
+				25203C7325EA6262000BE950 /* Notification.swift */,
+				25203C7425EA6262000BE950 /* String.swift */,
+				25203C7525EA6262000BE950 /* UIImage.swift */,
+				25203C7625EA6262000BE950 /* UIViewController.swift */,
+				25203C7725EA6262000BE950 /* UIWindow.swift */,
+				25203C7825EA6262000BE950 /* UIImageView+SD.swift */,
+				25203C7925EA6262000BE950 /* UIApplication.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		25203C8B25EA62B2000BE950 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				25203CC725EA655F000BE950 /* Result.swift */,
+				25203C8C25EA62B2000BE950 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		25203C8D25EA62B2000BE950 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25203C8E25EA62B2000BE950 /* SkyFloatingLabelTextField.swift */,
+				25203C8F25EA62B2000BE950 /* UITextField+fixCaretPosition.swift */,
+				25203C9025EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25203C9125EA62B2000BE950 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				25203C9225EA62B2000BE950 /* AuthViewController.swift */,
+				25203C9325EA62B2000BE950 /* AuthService.swift */,
+				25203C9425EA62B2000BE950 /* AuthFlow.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		25203C9525EA62B2000BE950 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				25203C9625EA62B2000BE950 /* NetworkManager.swift */,
+				25203C9725EA62B2000BE950 /* ViewHierarchyWorker.swift */,
+				25203C9825EA62B2000BE950 /* LocalStore.swift */,
+				25203C9925EA62B2000BE950 /* Style.swift */,
+				25203C9A25EA62B2000BE950 /* KeyboardBehavior.swift */,
+				25203C9B25EA62B2000BE950 /* FormKeyboardBehavior.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		25203CAE25EA62BB000BE950 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				25203CCC25EA65B0000BE950 /* Profile */,
+				25203C9125EA62B2000BE950 /* Auth */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		25203CAF25EA62EF000BE950 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25203CB025EA62EF000BE950 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		25203CB525EA6503000BE950 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				25203CB625EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift */,
+				25203CB725EA6503000BE950 /* AppCacher.swift */,
+				25203CB825EA6503000BE950 /* CacherType.swift */,
+				25203CB925EA6503000BE950 /* LocationCacher.swift */,
+				25203CBA25EA6503000BE950 /* LogsCacher.swift */,
+				25203CBB25EA6503000BE950 /* SqliteCacher.swift */,
+				25203CBC25EA6503000BE950 /* SqliteCacher+MappableCacherType.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		25203CCC25EA65B0000BE950 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		828F9BB28F3F5809FE637667 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */,
 				2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -347,7 +526,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25203CA525EA62B2000BE950 /* NetworkManager.swift in Sources */,
+				25203C8525EA6262000BE950 /* UIApplication.swift in Sources */,
+				25203CB125EA62EF000BE950 /* Profile.swift in Sources */,
+				25203C7A25EA6262000BE950 /* UIView.swift in Sources */,
+				25203C8425EA6262000BE950 /* UIImageView+SD.swift in Sources */,
+				25203C7B25EA6262000BE950 /* UIColor.swift in Sources */,
+				25203CBE25EA6503000BE950 /* AppCacher.swift in Sources */,
+				25203CA825EA62B2000BE950 /* Style.swift in Sources */,
+				25203C7D25EA6262000BE950 /* UITableView.swift in Sources */,
+				25203CC825EA655F000BE950 /* Result.swift in Sources */,
+				25203CA425EA62B2000BE950 /* AuthFlow.swift in Sources */,
+				25203C9F25EA62B2000BE950 /* SkyFloatingLabelTextField.swift in Sources */,
+				25203CA325EA62B2000BE950 /* AuthService.swift in Sources */,
+				25203C7F25EA6262000BE950 /* Notification.swift in Sources */,
+				25203CC325EA6503000BE950 /* SqliteCacher+MappableCacherType.swift in Sources */,
+				25203CA925EA62B2000BE950 /* KeyboardBehavior.swift in Sources */,
+				25203C8325EA6262000BE950 /* UIWindow.swift in Sources */,
+				25203C9D25EA62B2000BE950 /* ApplicationFlow.swift in Sources */,
+				25203CAA25EA62B2000BE950 /* FormKeyboardBehavior.swift in Sources */,
+				25203C8225EA6262000BE950 /* UIViewController.swift in Sources */,
+				25203C7E25EA6262000BE950 /* UITableViewCell.swift in Sources */,
+				25203CBF25EA6503000BE950 /* CacherType.swift in Sources */,
+				25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */,
+				25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */,
+				25203CA625EA62B2000BE950 /* ViewHierarchyWorker.swift in Sources */,
+				25203CA025EA62B2000BE950 /* UITextField+fixCaretPosition.swift in Sources */,
+				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
 				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
+				25203CC025EA6503000BE950 /* LocationCacher.swift in Sources */,
+				25203CA125EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				25203C9C25EA62B2000BE950 /* MainTabBarController.swift in Sources */,
+				25203C8125EA6262000BE950 /* UIImage.swift in Sources */,
+				25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */,
+				25203C8025EA6262000BE950 /* String.swift in Sources */,
+				25203C7C25EA6262000BE950 /* Int.swift in Sources */,
+				25203CC125EA6503000BE950 /* LogsCacher.swift in Sources */,
+				25203CBD25EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
