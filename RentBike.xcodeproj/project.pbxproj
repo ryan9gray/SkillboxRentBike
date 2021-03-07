@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250ECD3E25F4E144006EA881 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD3D25F4E144006EA881 /* Bike.swift */; };
+		250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD4525F4E2D2006EA881 /* BikeView.swift */; };
+		250ECD4B25F4E404006EA881 /* Bikes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 250ECD4A25F4E404006EA881 /* Bikes.geojson */; };
+		250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD5825F4F632006EA881 /* RoundButton.swift */; };
 		25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C0525EA5F14000BE950 /* AppDelegate.swift */; };
 		25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0B25EA5F14000BE950 /* Main.storyboard */; };
 		25203C0F25EA5F16000BE950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0E25EA5F16000BE950 /* Assets.xcassets */; };
@@ -92,6 +96,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250ECD3D25F4E144006EA881 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
+		250ECD4525F4E2D2006EA881 /* BikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeView.swift; sourceTree = "<group>"; };
+		250ECD4A25F4E404006EA881 /* Bikes.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bikes.geojson; sourceTree = "<group>"; };
+		250ECD5825F4F632006EA881 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		25203C0225EA5F14000BE950 /* RentBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25203C0525EA5F14000BE950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25203C0C25EA5F14000BE950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,7 +226,6 @@
 		25203C0425EA5F14000BE950 /* RentBike */ = {
 			isa = PBXGroup;
 			children = (
-				25203C0B25EA5F14000BE950 /* Main.storyboard */,
 				25203C0525EA5F14000BE950 /* AppDelegate.swift */,
 				25203C8A25EA62B2000BE950 /* ApplicationFlow.swift */,
 				25203CAE25EA62BB000BE950 /* Scene */,
@@ -255,6 +262,8 @@
 		25203C4725EA5FE2000BE950 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				25203C0B25EA5F14000BE950 /* Main.storyboard */,
+				250ECD4A25F4E404006EA881 /* Bikes.geojson */,
 				2554723025EA9F10003C806F /* Montserrat */,
 				25203C0E25EA5F16000BE950 /* Assets.xcassets */,
 				25203C1325EA5F16000BE950 /* Info.plist */,
@@ -296,6 +305,7 @@
 				25203C8E25EA62B2000BE950 /* SkyFloatingLabelTextField.swift */,
 				25203C8F25EA62B2000BE950 /* UITextField+fixCaretPosition.swift */,
 				25203C9025EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				250ECD5825F4F632006EA881 /* RoundButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				25203CB025EA62EF000BE950 /* Profile.swift */,
+				250ECD3D25F4E144006EA881 /* Bike.swift */,
+				250ECD4525F4E2D2006EA881 /* BikeView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -543,6 +555,7 @@
 				2554724C25EA9F10003C806F /* Montserrat-MediumItalic.ttf in Resources */,
 				25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */,
 				2554725225EA9F10003C806F /* Montserrat-Black.ttf in Resources */,
+				250ECD4B25F4E404006EA881 /* Bikes.geojson in Resources */,
 				2554725625EA9F10003C806F /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +644,7 @@
 				25203C8525EA6262000BE950 /* UIApplication.swift in Sources */,
 				25203CB125EA62EF000BE950 /* Profile.swift in Sources */,
 				25203C7A25EA6262000BE950 /* UIView.swift in Sources */,
+				250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */,
 				25203C8425EA6262000BE950 /* UIImageView+SD.swift in Sources */,
 				25203C7B25EA6262000BE950 /* UIColor.swift in Sources */,
 				25203CBE25EA6503000BE950 /* AppCacher.swift in Sources */,
@@ -654,6 +668,7 @@
 				25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */,
 				25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */,
 				25203CA625EA62B2000BE950 /* ViewHierarchyWorker.swift in Sources */,
+				250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */,
 				25203CA025EA62B2000BE950 /* UITextField+fixCaretPosition.swift in Sources */,
 				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
 				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
@@ -665,6 +680,7 @@
 				25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */,
 				25203C8025EA6262000BE950 /* String.swift in Sources */,
 				25203C7C25EA6262000BE950 /* Int.swift in Sources */,
+				250ECD3E25F4E144006EA881 /* Bike.swift in Sources */,
 				25203CC125EA6503000BE950 /* LogsCacher.swift in Sources */,
 				25203CBD25EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 			);
@@ -846,7 +862,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -867,7 +883,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

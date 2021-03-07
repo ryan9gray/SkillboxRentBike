@@ -35,10 +35,9 @@ struct ViewHierarchyWorker {
     static func resetAppForMain() {
         DispatchQueue.main.async {
             func isAlreadyReseted() -> Bool {
-                mainWindow?.rootViewController?.tabBarController == nil
+                mainWindow?.rootViewController?.children.first is AuthViewController
             }
             guard isAlreadyReseted() else { return }
-            
 			let controller = ApplicationFlow.shared.mainController()
             ViewHierarchyWorker.setRootViewController(controller)
         }
@@ -48,7 +47,6 @@ struct ViewHierarchyWorker {
 enum StoryboardWorker: String {
     case autorization =         "Auth"
     case main =                 "Main"
-    case map =                 "Map"
     case profile =              "Profile"
 
 

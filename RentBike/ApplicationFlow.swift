@@ -17,14 +17,14 @@ class ApplicationFlow {
 
     func start() {
         mapFlow.start()
-        profileFlow.start()
+        //profileFlow.start()
         
-		//startMain()
-		if Profile.isAuthorized {
-			startMain()
-		} else {
-			ViewHierarchyWorker.resetAppForAuthentication()
-		}
+		startMain()
+//		if Profile.isAuthorized {
+//			startMain()
+//		} else {
+//			ViewHierarchyWorker.resetAppForAuthentication()
+//		}
 	}
 
 	func startMain() {
