@@ -9,6 +9,10 @@
 import UIKit
 
 public extension UIView {
+    @discardableResult func prepareForAutoLayout() -> Self {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        return self
+    }
 
     @IBInspectable
     var cornerRadius: CGFloat {

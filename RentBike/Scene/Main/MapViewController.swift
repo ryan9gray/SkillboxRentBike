@@ -10,58 +10,103 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
-    @IBOutlet var buttonsStackView: UIStackView!
-    @IBOutlet var mapView: MKMapView!
+    @IBOutlet private var buttonsStackView: UIStackView!
+    @IBOutlet private var mapView: MKMapView!
 
-    private var artworks: [Bike] = []
-    var isLocationServiceEnabled: Bool { CLLocationManager.locationServicesEnabled() }
-    private let manager: CLLocationManager = CLLocationManager()
+    private var bikes: [Bike] = []
+    private var currentLocation: CLLocation?
+    private var selectedBike: Bike? {
+        didSet {
+            setButtons()
+        }
+    }
 
     @IBAction func locationTap(_ sender: Any) {
-        requestCurrentLocation()
+        guard let location = currentLocation else { return }
+        mapView.centerToLocation(location)
     }
+
     @IBAction func menuTap(_ sender: Any) {
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.isHidden = true
         setupMap()
-
         loadInitialData()
+        mapView.addAnnotations(bikes)
+        LocationTracker.shared.delegate = self
     }
 
-    private func setupMap() {
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+
+    func setButtons() {
+        buttonsStackView.subviews.forEach { $0.removeFromSuperview() }
+        guard let bike = selectedBike else {
+            return
+        }
+        let lock = RoundEdgeButton().prepareForAutoLayout()
+        lock.setTitle("З", for: .normal)
+        buttonsStackView.addArrangedSubview(lock)
+        let f = RoundEdgeButton().prepareForAutoLayout()
+        f.backgroundColor = .white
+        f.setTitle("Ф", for: .normal)
+
+        
+        buttonsStackView.addArrangedSubview(f)
+        let finish = RoundEdgeButton().prepareForAutoLayout()
+        finish.setTitle("Finish", for: .normal)
+
+        buttonsStackView.addArrangedSubview(finish)
+    }
+
+    // MARK: setup
+    private func setupMap() {
         mapView.delegate = self
         mapView.showsUserLocation = true
+        
         mapView.register(
-            Bike.self,
+            BikeView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier
         )
+        mapView.setUserTrackingMode(.follow, animated: true)
+        if let homeLocation = BikeProfile.homeLocation,
+           let safeDistanceFromHome = BikeProfile.safeDistanceFromHome {
+            let circleOverlay = MKCircle(center: homeLocation.coordinate,
+                                         radius: safeDistanceFromHome)
+
+            mapView.addOverlay(circleOverlay)
+        }
     }
-    func requestCurrentLocation() {
-        manager.requestAlwaysAuthorization()
-        manager.startUpdatingLocation()
+
+    /// Force set location
+    func followUserLocation() {
+        if let location = LocationTracker.shared.locationManager.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 4000, longitudinalMeters: 4000)
+            mapView.setRegion(region, animated: true)
+        }
     }
 
     private func loadInitialData() {
-        // 1
         guard
             let fileName = Bundle.main.url(forResource: "Bikes", withExtension: "geojson"),
             let artworkData = try? Data(contentsOf: fileName)
         else {
             return
         }
-
         do {
             let features = try MKGeoJSONDecoder()
                 .decode(artworkData)
                 .compactMap { $0 as? MKGeoJSONFeature }
             let validWorks = features.compactMap(Bike.init)
-            artworks.append(contentsOf: validWorks)
+            bikes.append(contentsOf: validWorks)
         } catch {
             print("Unexpected error: \(error).")
         }
@@ -85,31 +130,36 @@ extension MapViewController: MKMapViewDelegate {
         annotationView view: MKAnnotationView,
         calloutAccessoryControlTapped control: UIControl
     ) {
-        guard let artwork = view.annotation as? Bike else {
-            return
+        guard let bike = view.annotation as? Bike else { return }
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        bike.mapItem?.openInMaps(launchOptions: launchOptions)
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let bike = view.annotation as? Bike else { return }
+        selectedBike = bike
+    }
+
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+
+        if let overlay = overlay as? MKCircle{
+            let circleRenderer = MKCircleRenderer(circle: overlay)
+            circleRenderer.fillColor = UIColor.green
+            circleRenderer.alpha = 0.2
+            return circleRenderer
         }
 
-        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-        artwork.mapItem?.openInMaps(launchOptions: launchOptions)
+        return MKOverlayRenderer(overlay: overlay)
     }
 }
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        guard status != .notDetermined else { return }
+extension MapViewController: LocationTrackerDelegate {
+    func locationTrackerDidChangeAuthorizationStatus(_ locationTracker: LocationTracker) {
 
-
-        if let location = manager.location {
-            locationManager(manager, didUpdateLocations: [ location ])
-        }
     }
-
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-
+        currentLocation = location
         mapView.centerToLocation(location)
     }
 
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
 }

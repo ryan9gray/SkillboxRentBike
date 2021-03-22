@@ -72,6 +72,7 @@ class Bike: NSObject, MKAnnotation {
     }
 
     var image: UIImage {
-        return #imageLiteral(resourceName: "bike")
+        
+        return UIImage(named: "bike64Orange")!
     }
 }

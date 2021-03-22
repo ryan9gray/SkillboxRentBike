@@ -11,6 +11,7 @@
 		250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD4525F4E2D2006EA881 /* BikeView.swift */; };
 		250ECD4B25F4E404006EA881 /* Bikes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 250ECD4A25F4E404006EA881 /* Bikes.geojson */; };
 		250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD5825F4F632006EA881 /* RoundButton.swift */; };
+		250ECDA625F51C0C006EA881 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECDA525F51C0C006EA881 /* LayoutHelper.swift */; };
 		25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C0525EA5F14000BE950 /* AppDelegate.swift */; };
 		25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0B25EA5F14000BE950 /* Main.storyboard */; };
 		25203C0F25EA5F16000BE950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0E25EA5F16000BE950 /* Assets.xcassets */; };
@@ -75,6 +76,15 @@
 		2554725425EA9F10003C806F /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554724125EA9F10003C806F /* Montserrat-Italic.ttf */; };
 		2554725525EA9F10003C806F /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554724225EA9F10003C806F /* Montserrat-SemiBoldItalic.ttf */; };
 		2554725625EA9F10003C806F /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554724325EA9F10003C806F /* Montserrat-ExtraBoldItalic.ttf */; };
+		256E333D2608A9AA000C679F /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E333C2608A9AA000C679F /* DrawerController.swift */; };
+		256E33482608A9EB000C679F /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33422608A9EB000C679F /* MenuPresenter.swift */; };
+		256E33492608A9EB000C679F /* MenuWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33432608A9EB000C679F /* MenuWorker.swift */; };
+		256E334A2608A9EB000C679F /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33442608A9EB000C679F /* MenuRouter.swift */; };
+		256E334B2608A9EB000C679F /* MenuModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33452608A9EB000C679F /* MenuModels.swift */; };
+		256E334C2608A9EB000C679F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33462608A9EB000C679F /* MenuViewController.swift */; };
+		256E334D2608A9EB000C679F /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33472608A9EB000C679F /* MenuInteractor.swift */; };
+		256E33552608AA94000C679F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33542608AA94000C679F /* RootViewController.swift */; };
+		256E335A2608ACA2000C679F /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E33592608ACA2000C679F /* LocationTracker.swift */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +110,8 @@
 		250ECD4525F4E2D2006EA881 /* BikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeView.swift; sourceTree = "<group>"; };
 		250ECD4A25F4E404006EA881 /* Bikes.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bikes.geojson; sourceTree = "<group>"; };
 		250ECD5825F4F632006EA881 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		250ECD6025F500A0006EA881 /* LocationMock.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationMock.gpx; sourceTree = "<group>"; };
+		250ECDA525F51C0C006EA881 /* LayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		25203C0225EA5F14000BE950 /* RentBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25203C0525EA5F14000BE950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25203C0C25EA5F14000BE950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +182,15 @@
 		2554724125EA9F10003C806F /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		2554724225EA9F10003C806F /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2554724325EA9F10003C806F /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		256E333C2608A9AA000C679F /* DrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
+		256E33422608A9EB000C679F /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
+		256E33432608A9EB000C679F /* MenuWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuWorker.swift; sourceTree = "<group>"; };
+		256E33442608A9EB000C679F /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		256E33452608A9EB000C679F /* MenuModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModels.swift; sourceTree = "<group>"; };
+		256E33462608A9EB000C679F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		256E33472608A9EB000C679F /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		256E33542608AA94000C679F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		256E33592608ACA2000C679F /* LocationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
 		AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +288,7 @@
 				2554723025EA9F10003C806F /* Montserrat */,
 				25203C0E25EA5F16000BE950 /* Assets.xcassets */,
 				25203C1325EA5F16000BE950 /* Info.plist */,
+				250ECD6025F500A0006EA881 /* LocationMock.gpx */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -295,6 +317,7 @@
 			children = (
 				25203CC725EA655F000BE950 /* Result.swift */,
 				25203C8C25EA62B2000BE950 /* NetworkService.swift */,
+				256E33592608ACA2000C679F /* LocationTracker.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -323,6 +346,8 @@
 		25203C9525EA62B2000BE950 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				256E333C2608A9AA000C679F /* DrawerController.swift */,
+				250ECDA525F51C0C006EA881 /* LayoutHelper.swift */,
 				25203C9625EA62B2000BE950 /* NetworkManager.swift */,
 				25203C9725EA62B2000BE950 /* ViewHierarchyWorker.swift */,
 				25203C9825EA62B2000BE950 /* LocalStore.swift */,
@@ -336,6 +361,7 @@
 		25203CAE25EA62BB000BE950 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				256E33412608A9C1000C679F /* Menu */,
 				25203CD525EA8CCB000BE950 /* Main */,
 				25203CCC25EA65B0000BE950 /* Profile */,
 				25203C9125EA62B2000BE950 /* Auth */,
@@ -409,6 +435,20 @@
 				2554724325EA9F10003C806F /* Montserrat-ExtraBoldItalic.ttf */,
 			);
 			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		256E33412608A9C1000C679F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				256E33422608A9EB000C679F /* MenuPresenter.swift */,
+				256E33432608A9EB000C679F /* MenuWorker.swift */,
+				256E33442608A9EB000C679F /* MenuRouter.swift */,
+				256E33452608A9EB000C679F /* MenuModels.swift */,
+				256E33462608A9EB000C679F /* MenuViewController.swift */,
+				256E33472608A9EB000C679F /* MenuInteractor.swift */,
+				256E33542608AA94000C679F /* RootViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		828F9BB28F3F5809FE637667 /* Pods */ = {
@@ -640,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256E335A2608ACA2000C679F /* LocationTracker.swift in Sources */,
 				25203CA525EA62B2000BE950 /* NetworkManager.swift in Sources */,
 				25203C8525EA6262000BE950 /* UIApplication.swift in Sources */,
 				25203CB125EA62EF000BE950 /* Profile.swift in Sources */,
@@ -657,6 +698,7 @@
 				25203CD725EA8DAB000BE950 /* ProfileFlow.swift in Sources */,
 				25203C7F25EA6262000BE950 /* Notification.swift in Sources */,
 				25203CC325EA6503000BE950 /* SqliteCacher+MappableCacherType.swift in Sources */,
+				256E334A2608A9EB000C679F /* MenuRouter.swift in Sources */,
 				25203CA925EA62B2000BE950 /* KeyboardBehavior.swift in Sources */,
 				25203C8325EA6262000BE950 /* UIWindow.swift in Sources */,
 				25203C9D25EA62B2000BE950 /* ApplicationFlow.swift in Sources */,
@@ -665,21 +707,29 @@
 				25203C7E25EA6262000BE950 /* UITableViewCell.swift in Sources */,
 				25203CDF25EA8DE0000BE950 /* ProfileViewController.swift in Sources */,
 				25203CBF25EA6503000BE950 /* CacherType.swift in Sources */,
+				256E334B2608A9EB000C679F /* MenuModels.swift in Sources */,
+				256E334D2608A9EB000C679F /* MenuInteractor.swift in Sources */,
 				25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */,
 				25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */,
+				256E33552608AA94000C679F /* RootViewController.swift in Sources */,
+				256E33492608A9EB000C679F /* MenuWorker.swift in Sources */,
 				25203CA625EA62B2000BE950 /* ViewHierarchyWorker.swift in Sources */,
 				250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */,
 				25203CA025EA62B2000BE950 /* UITextField+fixCaretPosition.swift in Sources */,
 				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
+				256E33482608A9EB000C679F /* MenuPresenter.swift in Sources */,
 				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
 				25203CC025EA6503000BE950 /* LocationCacher.swift in Sources */,
 				25203CA125EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */,
 				25203C8125EA6262000BE950 /* UIImage.swift in Sources */,
 				25203CD125EA8CC6000BE950 /* MapFlow.swift in Sources */,
+				256E334C2608A9EB000C679F /* MenuViewController.swift in Sources */,
 				25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */,
 				25203C8025EA6262000BE950 /* String.swift in Sources */,
+				250ECDA625F51C0C006EA881 /* LayoutHelper.swift in Sources */,
 				25203C7C25EA6262000BE950 /* Int.swift in Sources */,
+				256E333D2608A9AA000C679F /* DrawerController.swift in Sources */,
 				250ECD3E25F4E144006EA881 /* Bike.swift in Sources */,
 				25203CC125EA6503000BE950 /* LogsCacher.swift in Sources */,
 				25203CBD25EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift in Sources */,

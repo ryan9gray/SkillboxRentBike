@@ -35,9 +35,9 @@ struct ViewHierarchyWorker {
     static func resetAppForMain() {
         DispatchQueue.main.async {
             func isAlreadyReseted() -> Bool {
-                mainWindow?.rootViewController?.children.first is AuthViewController
+                mainWindow?.rootViewController?.children.first is MapViewController
             }
-            guard isAlreadyReseted() else { return }
+            guard !isAlreadyReseted() else { return }
 			let controller = ApplicationFlow.shared.mainController()
             ViewHierarchyWorker.setRootViewController(controller)
         }
