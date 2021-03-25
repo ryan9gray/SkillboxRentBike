@@ -46,27 +46,6 @@ extension LocationTracker: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         delegate?.locationManager(manager, didUpdateLocations: locations)
-        print("Got to the didUpdateLocations() method")
-
-        guard let homeLocation = BikeProfile.homeLocation else {
-            BikeProfile.homeLocation = locations.first
-            return
-        }
-
-        guard let safeDistanceFromHome = BikeProfile.safeDistanceFromHome else {
-            return
-        }
-
-        for location in locations {
-            let distanceFromHome = location.distance(from: homeLocation)
-
-            if distanceFromHome > safeDistanceFromHome {
-                NotificationCenter.default.post(name: TenPMNotifications.UnsafeDistanceNotification, object: nil)
-            } else {
-                NotificationCenter.default.post(name: TenPMNotifications.SafeDistanceNotification, object: nil)
-            }
-        }
-        print("Got to the end the didUpdateLocations method")
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Menu View Controller-->
         <scene sceneID="oBo-OL-EWh">
@@ -17,24 +25,72 @@
                         <viewControllerLayoutGuide type="top" id="gyg-xK-HZ2"/>
                         <viewControllerLayoutGuide type="bottom" id="eLd-Yd-7ME"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aEw-aL-Co9">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="aEw-aL-Co9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-a7-ieh">
-                                <rect key="frame" x="44" y="81" width="120" height="120"/>
+                                <rect key="frame" x="20" y="92" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="TtR-F2-hJn"/>
                                     <constraint firstAttribute="width" constant="120" id="wzp-vQ-Z5s"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVE-hW-NTQ">
+                                <rect key="frame" x="20" y="804" width="63" height="34"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <state key="normal" title="Выйти"/>
+                                <connections>
+                                    <action selector="logoutTap:" destination="Mzj-xO-fZb" eventType="touchUpInside" id="8kd-sr-N6L"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-hR-ui1">
+                                <rect key="frame" x="20" y="236" width="94.5" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кошелек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxB-AA-PFm">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поездки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4i-w3-o3I">
+                                        <rect key="frame" x="0.0" y="27" width="94.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пробег" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVd-uo-zr8">
+                                        <rect key="frame" x="0.0" y="54" width="94.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каллории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh5-IT-2ql">
+                                        <rect key="frame" x="0.0" y="81" width="94.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fX4-a7-ieh" firstAttribute="top" secondItem="gyg-xK-HZ2" secondAttribute="bottom" constant="37" id="FuF-WE-M4g"/>
-                            <constraint firstItem="fX4-a7-ieh" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" constant="24" id="gXf-P1-iFO"/>
+                            <constraint firstItem="S2J-hR-ui1" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="BvI-VD-47s"/>
+                            <constraint firstItem="fX4-a7-ieh" firstAttribute="top" secondItem="gyg-xK-HZ2" secondAttribute="bottom" constant="48" id="FuF-WE-M4g"/>
+                            <constraint firstItem="IVE-hW-NTQ" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="GUR-tb-NL0"/>
+                            <constraint firstItem="S2J-hR-ui1" firstAttribute="top" secondItem="fX4-a7-ieh" secondAttribute="bottom" constant="24" id="Pjl-fe-m8h"/>
+                            <constraint firstItem="eLd-Yd-7ME" firstAttribute="top" secondItem="IVE-hW-NTQ" secondAttribute="bottom" constant="24" id="ctn-7x-FWf"/>
+                            <constraint firstItem="fX4-a7-ieh" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="gXf-P1-iFO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="fX4-a7-ieh" id="rI0-xU-Xdh"/>
+                        <outlet property="calLabel" destination="Fh5-IT-2ql" id="c8H-P9-Lwz"/>
+                        <outlet property="distansLabel" destination="dVd-uo-zr8" id="xgw-cR-hM8"/>
+                        <outlet property="ridesLabel" destination="c4i-w3-o3I" id="2ee-yq-3CJ"/>
+                        <outlet property="walletLabel" destination="gxB-AA-PFm" id="8j4-vJ-Qiw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDS-rh-3f4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,9 +294,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

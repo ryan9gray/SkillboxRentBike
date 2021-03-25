@@ -12,11 +12,20 @@ import CoreLocation
 class MapViewController: UIViewController {
     @IBOutlet private var buttonsStackView: UIStackView!
     @IBOutlet private var mapView: MKMapView!
+    @IBOutlet private var lightButton: RoundEdgeButton!
+    @IBOutlet private var lockButton: RoundEdgeButton!
+    @IBOutlet private var finishButton: RoundEdgeButton!
+    @IBOutlet private var locationButton: RoundEdgeButton!
+    @IBOutlet var actButtons: [RoundEdgeButton]!
+
     private var bikes: [Bike] = []
     private var currentLocation: CLLocation? {
         didSet {
             guard let location = currentLocation else { return }
             updateMapOverlayViews(coordinate: location.coordinate)
+            if input.inProgress() {
+                output.moved(location)
+            }
         }
     }
     private var selectedBike: Bike? {
@@ -24,16 +33,17 @@ class MapViewController: UIViewController {
             setButtons()
         }
     }
-    @IBOutlet private var lightButton: RoundEdgeButton!
-    @IBOutlet private var lockButton: RoundEdgeButton!
-    @IBOutlet private var finishButton: RoundEdgeButton!
-    @IBOutlet private var locationButton: RoundEdgeButton!
 
-    @IBOutlet var actButtons: [RoundEdgeButton]!
-    struct Input {
-        let menu: () -> Void
+    struct Output {
+        var start: () -> Void
+        var moved: (CLLocation) -> Void
     }
+    struct Input {
+        var inProgress: () -> Bool
+    }
+
     var input: Input!
+    var output: Output!
 
     @IBAction func locationTap(_ sender: Any) {
         guard let location = currentLocation else { return }
@@ -41,6 +51,7 @@ class MapViewController: UIViewController {
     }
     @IBAction func finishTap(_ sender: Any) {
 
+        finishButton.isSelected.toggle()
     }
     @IBAction func lightTap(_ sender: Any) {
         lightButton.isSelected.toggle()
@@ -48,6 +59,7 @@ class MapViewController: UIViewController {
     @IBAction func lockTap(_ sender: Any) {
         lockButton.isSelected.toggle()
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,11 +68,7 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(bikes)
         LocationTracker.shared.delegate = self
         actButtons.forEach { $0.isHidden = true }
-        actButtons.forEach { $0.imageView?.contentMode = .scaleAspectFit }
-    }
-
-    @objc func handleMenuButton() {
-        input.menu()
+        LocationTracker.shared.authorizeLocationTracking()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,6 +85,33 @@ class MapViewController: UIViewController {
         actButtons.forEach { $0.isHidden = false }
     }
 
+    func toRent() {
+        guard let bike = selectedBike else { return }
+        guard let dist = currentLocation?.distance(
+            from: CLLocation(latitude: bike.coordinate.latitude, longitude: bike.coordinate.longitude)
+        ) else { return }
+        if dist > BikeProfile.maxDistanse {
+			showInvalidDistanceAlert()
+        } else {
+
+        }
+    }
+
+    fileprivate func showInvalidDistanceAlert() {
+        let alert = UIAlertController(
+            title: nil,
+            message: "Please enter a valid distance in kilometers",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil
+        )
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+
     // MARK: setup
     private func setupMap() {
         mapView.delegate = self
@@ -90,7 +125,6 @@ class MapViewController: UIViewController {
 
     func updateMapOverlayViews(coordinate: CLLocationCoordinate2D) {
         mapView.removeOverlays(mapView.overlays)
-
         let circleOverlay = MKCircle(
             center: coordinate,
             radius: BikeProfile.maxDistanse
@@ -157,11 +191,9 @@ extension MapViewController: MKMapViewDelegate {
 }
 extension MapViewController: LocationTrackerDelegate {
     func locationTrackerDidChangeAuthorizationStatus(_ locationTracker: LocationTracker) {
-
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         currentLocation = location
     }
-
 }

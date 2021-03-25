@@ -20,6 +20,15 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
     var interactor: MenuBusinessLogic?
     var router: (MenuRoutingLogic & MenuDataPassing)?
 
+    @IBOutlet var avatarImageView: UIImageView!
+    @IBOutlet var walletLabel: UILabel!
+    @IBOutlet var calLabel: UILabel!
+    @IBOutlet var distansLabel: UILabel!
+    @IBOutlet var ridesLabel: UILabel!
+
+    @IBAction func logoutTap(_ sender: Any) {
+
+    }
 
     // MARK: Object lifecycle
 

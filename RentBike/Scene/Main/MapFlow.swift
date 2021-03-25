@@ -8,12 +8,12 @@
 import UIKit
 
 class MapFlow {
-
     let rootVC: RootViewController = RootViewController.init(nibName: nil, bundle: nil)
     let service = NetworkService.shared
 
+    var inProgress: Bool = false
+
     init() {
-        //initialViewController = RootViewController.init(nibName: nil, bundle: nil)
     }
 
     func start() {
@@ -27,9 +27,25 @@ class MapFlow {
 
     private func createInitialViewController() -> UIViewController {
         let controller = MapViewController.instantiate(fromStoryboard: .main)
-        //controller.input = .init(menu: menu)
+        controller.input = .init(
+            inProgress: { [weak self] in self?.inProgress ?? false  }
+        )
+        controller.output = .init(
+            start: { [weak self] in
+                self?.startRide()
+            },
+            moved: { coordinate in
 
+            }
+        )
         return controller
     }
 
+    func startRide() {
+
+    }
+}
+
+struct RideStat {
+    
 }
