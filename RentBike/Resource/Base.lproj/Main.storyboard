@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,12 +20,25 @@
                     <view key="view" contentMode="scaleToFill" id="aEw-aL-Co9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-a7-ieh">
+                                <rect key="frame" x="44" y="81" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="TtR-F2-hJn"/>
+                                    <constraint firstAttribute="width" constant="120" id="wzp-vQ-Z5s"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="fX4-a7-ieh" firstAttribute="top" secondItem="gyg-xK-HZ2" secondAttribute="bottom" constant="37" id="FuF-WE-M4g"/>
+                            <constraint firstItem="fX4-a7-ieh" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" constant="24" id="gXf-P1-iFO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDS-rh-3f4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="138"/>
+            <point key="canvasLocation" x="540.57971014492762" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="akt-aw-8su">
@@ -65,58 +79,106 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-c0-lUk">
                                 <rect key="frame" x="0.0" y="796" width="414" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejv-9K-meH" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="20" width="60" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ejv-9K-meH" secondAttribute="height" multiplier="1:1" id="INd-c9-D8N"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="linkColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="menuTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dR2-Le-Syn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1c-wW-4dN" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
-                                        <rect key="frame" x="336" y="20" width="60" height="60"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="location.fill" catalog="system"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="linkColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="locationTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMl-ko-ka7"/>
-                                        </connections>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-SD-UFp">
-                                        <rect key="frame" x="83" y="20" width="248" height="60"/>
+                                        <rect key="frame" x="79" y="0.0" width="256" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejv-9K-meH" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="18" width="64" height="64"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="856-xd-2sg"/>
+                                                    <constraint firstAttribute="width" secondItem="ejv-9K-meH" secondAttribute="height" multiplier="1:1" id="INd-c9-D8N"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" image="lockOn"/>
+                                                <state key="selected" image="lockOff"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lockTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVF-si-jlk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-q8-A9e" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="18" width="64" height="64"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CBV-q8-A9e" secondAttribute="height" multiplier="1:1" id="AFl-eC-hq3"/>
+                                                    <constraint firstAttribute="height" constant="64" id="gog-Hf-RhU"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" image="lightbulbOff"/>
+                                                <state key="selected" image="lightbulbOn"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myi-9t-cDc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdI-IT-lsb" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
+                                                <rect key="frame" x="128" y="18" width="64" height="64"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="0oA-Ec-ue4"/>
+                                                    <constraint firstAttribute="width" secondItem="VdI-IT-lsb" secondAttribute="height" multiplier="1:1" id="LtB-iL-2Jv"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" image="start"/>
+                                                <state key="selected" image="finish"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="finishTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssa-iw-Q0D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1c-wW-4dN" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
+                                                <rect key="frame" x="192" y="18" width="64" height="64"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="3gK-W1-dFB"/>
+                                                    <constraint firstAttribute="width" secondItem="E1c-wW-4dN" secondAttribute="height" multiplier="1:1" id="lCD-Z3-Fx5"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="location.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="locationTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMl-ko-ka7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="E1c-wW-4dN" secondAttribute="trailing" constant="18" id="3JW-u4-kj6"/>
-                                    <constraint firstItem="E1c-wW-4dN" firstAttribute="height" secondItem="XBU-c0-lUk" secondAttribute="height" multiplier="0.6" id="C6P-dg-Udg"/>
-                                    <constraint firstItem="E1c-wW-4dN" firstAttribute="centerY" secondItem="XBU-c0-lUk" secondAttribute="centerY" id="KL4-FR-kNl"/>
-                                    <constraint firstItem="E1c-wW-4dN" firstAttribute="width" secondItem="E1c-wW-4dN" secondAttribute="height" multiplier="1:1" id="YSA-q5-jQm"/>
-                                    <constraint firstItem="rn0-SD-UFp" firstAttribute="top" secondItem="ejv-9K-meH" secondAttribute="top" id="aVX-J1-Mhh"/>
-                                    <constraint firstItem="rn0-SD-UFp" firstAttribute="leading" secondItem="ejv-9K-meH" secondAttribute="trailing" constant="5" id="bwA-0e-hir"/>
-                                    <constraint firstItem="E1c-wW-4dN" firstAttribute="leading" secondItem="rn0-SD-UFp" secondAttribute="trailing" constant="5" id="w4E-M6-WHY"/>
-                                    <constraint firstItem="ejv-9K-meH" firstAttribute="height" secondItem="XBU-c0-lUk" secondAttribute="height" multiplier="0.6" id="w7a-61-38t"/>
-                                    <constraint firstItem="ejv-9K-meH" firstAttribute="leading" secondItem="XBU-c0-lUk" secondAttribute="leading" constant="18" id="xWv-SS-1Qb"/>
-                                    <constraint firstItem="ejv-9K-meH" firstAttribute="centerY" secondItem="XBU-c0-lUk" secondAttribute="centerY" id="y71-3a-WgS"/>
+                                    <constraint firstItem="rn0-SD-UFp" firstAttribute="top" secondItem="XBU-c0-lUk" secondAttribute="top" id="Q7h-yp-5lb"/>
+                                    <constraint firstAttribute="bottom" secondItem="rn0-SD-UFp" secondAttribute="bottom" id="TBz-T8-i8T"/>
                                     <constraint firstAttribute="height" constant="100" id="ys9-53-WD3"/>
-                                    <constraint firstItem="rn0-SD-UFp" firstAttribute="bottom" secondItem="ejv-9K-meH" secondAttribute="bottom" id="zRe-xU-SdQ"/>
+                                    <constraint firstItem="rn0-SD-UFp" firstAttribute="centerX" secondItem="XBU-c0-lUk" secondAttribute="centerX" id="zGx-FS-BOT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -133,7 +195,14 @@
                     </view>
                     <connections>
                         <outlet property="buttonsStackView" destination="rn0-SD-UFp" id="CAC-QY-UmW"/>
+                        <outlet property="finishButton" destination="VdI-IT-lsb" id="zR4-eM-5Ls"/>
+                        <outlet property="lightButton" destination="CBV-q8-A9e" id="LGb-RP-0AC"/>
+                        <outlet property="locationButton" destination="E1c-wW-4dN" id="pIS-Zf-tOK"/>
+                        <outlet property="lockButton" destination="ejv-9K-meH" id="dpi-Kj-oDa"/>
                         <outlet property="mapView" destination="y48-IC-xNP" id="HO6-DU-0Ha"/>
+                        <outletCollection property="actButtons" destination="ejv-9K-meH" collectionClass="NSMutableArray" id="S8B-xf-LmA"/>
+                        <outletCollection property="actButtons" destination="CBV-q8-A9e" collectionClass="NSMutableArray" id="DyW-6G-jGE"/>
+                        <outletCollection property="actButtons" destination="VdI-IT-lsb" collectionClass="NSMutableArray" id="NaE-uo-2aF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,20 +211,36 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="CBV-q8-A9e">
+            <size key="intrinsicContentSize" width="64" height="64"/>
+        </designable>
         <designable name="E1c-wW-4dN">
-            <size key="intrinsicContentSize" width="20" height="22"/>
+            <size key="intrinsicContentSize" width="24.5" height="23.5"/>
+        </designable>
+        <designable name="VdI-IT-lsb">
+            <size key="intrinsicContentSize" width="64" height="64"/>
         </designable>
         <designable name="ejv-9K-meH">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="64" height="64"/>
         </designable>
     </designables>
     <resources>
+        <image name="bike" width="300" height="300"/>
+        <image name="finish" width="64" height="64"/>
+        <image name="lightbulbOff" width="64" height="64"/>
+        <image name="lightbulbOn" width="64" height="64"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
+        <image name="lockOff" width="64" height="64"/>
+        <image name="lockOn" width="64" height="64"/>
+        <image name="start" width="64" height="64"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,6 +13,6 @@
 import UIKit
 
 class MenuWorker {
-    func doSomeWork() {
-    }
+
+
 }

@@ -12,16 +12,24 @@ import CoreLocation
 class MapViewController: UIViewController {
     @IBOutlet private var buttonsStackView: UIStackView!
     @IBOutlet private var mapView: MKMapView!
-    fileprivate var menuButton: UIBarButtonItem!
-
     private var bikes: [Bike] = []
-    private var currentLocation: CLLocation?
+    private var currentLocation: CLLocation? {
+        didSet {
+            guard let location = currentLocation else { return }
+            updateMapOverlayViews(coordinate: location.coordinate)
+        }
+    }
     private var selectedBike: Bike? {
         didSet {
             setButtons()
         }
     }
+    @IBOutlet private var lightButton: RoundEdgeButton!
+    @IBOutlet private var lockButton: RoundEdgeButton!
+    @IBOutlet private var finishButton: RoundEdgeButton!
+    @IBOutlet private var locationButton: RoundEdgeButton!
 
+    @IBOutlet var actButtons: [RoundEdgeButton]!
     struct Input {
         let menu: () -> Void
     }
@@ -31,16 +39,24 @@ class MapViewController: UIViewController {
         guard let location = currentLocation else { return }
         mapView.centerToLocation(location)
     }
+    @IBAction func finishTap(_ sender: Any) {
 
+    }
+    @IBAction func lightTap(_ sender: Any) {
+        lightButton.isSelected.toggle()
+    }
+    @IBAction func lockTap(_ sender: Any) {
+        lockButton.isSelected.toggle()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //menuButton = UIBarButtonItem(image: UIImage.init(named: "hamburger-menu-icon"), style: .plain, target: self, action: #selector(handleMenuButton))
-        navigationItem.leftBarButtonItem = menuButton
         setupMap()
         loadInitialData()
         mapView.addAnnotations(bikes)
         LocationTracker.shared.delegate = self
+        actButtons.forEach { $0.isHidden = true }
+        actButtons.forEach { $0.imageView?.contentMode = .scaleAspectFit }
     }
 
     @objc func handleMenuButton() {
@@ -56,23 +72,9 @@ class MapViewController: UIViewController {
     }
 
     func setButtons() {
-        buttonsStackView.subviews.forEach { $0.removeFromSuperview() }
-        guard let bike = selectedBike else {
-            return
-        }
-        let lock = RoundEdgeButton().prepareForAutoLayout()
-        lock.setTitle("З", for: .normal)
-        buttonsStackView.addArrangedSubview(lock)
-        let f = RoundEdgeButton().prepareForAutoLayout()
-        f.backgroundColor = .white
-        f.setTitle("Ф", for: .normal)
+        guard let bike = selectedBike else { return }
 
-        
-        buttonsStackView.addArrangedSubview(f)
-        let finish = RoundEdgeButton().prepareForAutoLayout()
-        finish.setTitle("Finish", for: .normal)
-
-        buttonsStackView.addArrangedSubview(finish)
+        actButtons.forEach { $0.isHidden = false }
     }
 
     // MARK: setup
@@ -84,31 +86,24 @@ class MapViewController: UIViewController {
             BikeView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier
         )
-        //mapView.setUserTrackingMode(.followWithHeading, animated: true)
-        if let homeLocation = BikeProfile.homeLocation,
-           let safeDistanceFromHome = BikeProfile.safeDistanceFromHome {
-            let circleOverlay = MKCircle(center: homeLocation.coordinate,
-                                         radius: safeDistanceFromHome)
-
-            mapView.addOverlay(circleOverlay)
-        }
     }
 
-    /// Force set location
-    func followUserLocation() {
-        if let location = LocationTracker.shared.locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 4000, longitudinalMeters: 4000)
-            mapView.setRegion(region, animated: true)
-        }
+    func updateMapOverlayViews(coordinate: CLLocationCoordinate2D) {
+        mapView.removeOverlays(mapView.overlays)
+
+        let circleOverlay = MKCircle(
+            center: coordinate,
+            radius: BikeProfile.maxDistanse
+        )
+        mapView.addOverlay(circleOverlay)
     }
 
     private func loadInitialData() {
         guard
             let fileName = Bundle.main.url(forResource: "Bikes", withExtension: "geojson"),
             let artworkData = try? Data(contentsOf: fileName)
-        else {
-            return
-        }
+        else { return }
+        
         do {
             let features = try MKGeoJSONDecoder()
                 .decode(artworkData)
@@ -122,7 +117,7 @@ class MapViewController: UIViewController {
 }
 
 private extension MKMapView {
-    func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
+    func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 3000) {
         let coordinateRegion = MKCoordinateRegion(
             center: location.coordinate,
             latitudinalMeters: regionRadius,
@@ -167,7 +162,6 @@ extension MapViewController: LocationTrackerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         currentLocation = location
-        mapView.centerToLocation(location)
     }
 
 }

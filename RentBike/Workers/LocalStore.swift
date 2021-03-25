@@ -77,6 +77,7 @@ class BikeProfile {
         }
     }
 
+    static let maxDistanse: CLLocationDistance = .init(2000)
     private static let safeDistanceKey = "safeDistance"
     class var safeDistanceFromHome: CLLocationDistance? {
         get {
