@@ -9,22 +9,27 @@ import UIKit
 
 class MapFlow {
 
-    let initialViewController: UINavigationController
+    let rootVC: RootViewController = RootViewController.init(nibName: nil, bundle: nil)
     let service = NetworkService.shared
 
     init() {
-        let navigationController = UINavigationController()
-        initialViewController = navigationController
+        //initialViewController = RootViewController.init(nibName: nil, bundle: nil)
     }
 
     func start() {
-        initialViewController.setViewControllers([ createInitialViewController() ], animated: false)
+        rootVC.setViewControllers([ createInitialViewController() ], animated: false)
     }
     
+    lazy var initialViewController: DrawerController = {
+        let drawler = DrawerController(rootViewController: rootVC, menuController: MenuViewController.instantiate(fromStoryboard: .main))
+        return drawler
+    }()
+
     private func createInitialViewController() -> UIViewController {
         let controller = MapViewController.instantiate(fromStoryboard: .main)
-
+        //controller.input = .init(menu: menu)
 
         return controller
     }
+
 }

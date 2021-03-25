@@ -12,6 +12,7 @@ import CoreLocation
 class MapViewController: UIViewController {
     @IBOutlet private var buttonsStackView: UIStackView!
     @IBOutlet private var mapView: MKMapView!
+    fileprivate var menuButton: UIBarButtonItem!
 
     private var bikes: [Bike] = []
     private var currentLocation: CLLocation?
@@ -21,24 +22,31 @@ class MapViewController: UIViewController {
         }
     }
 
+    struct Input {
+        let menu: () -> Void
+    }
+    var input: Input!
+
     @IBAction func locationTap(_ sender: Any) {
         guard let location = currentLocation else { return }
         mapView.centerToLocation(location)
     }
 
-    @IBAction func menuTap(_ sender: Any) {
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.isHidden = true
+        //menuButton = UIBarButtonItem(image: UIImage.init(named: "hamburger-menu-icon"), style: .plain, target: self, action: #selector(handleMenuButton))
+        navigationItem.leftBarButtonItem = menuButton
         setupMap()
         loadInitialData()
         mapView.addAnnotations(bikes)
         LocationTracker.shared.delegate = self
     }
 
+    @objc func handleMenuButton() {
+        input.menu()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
@@ -76,7 +84,7 @@ class MapViewController: UIViewController {
             BikeView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier
         )
-        mapView.setUserTrackingMode(.follow, animated: true)
+        //mapView.setUserTrackingMode(.followWithHeading, animated: true)
         if let homeLocation = BikeProfile.homeLocation,
            let safeDistanceFromHome = BikeProfile.safeDistanceFromHome {
             let circleOverlay = MKCircle(center: homeLocation.coordinate,

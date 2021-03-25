@@ -13,14 +13,12 @@ protocol RootViewControllerDelegate: class {
 
 class RootViewController: UINavigationController, UINavigationControllerDelegate {
     fileprivate var menuButton: UIBarButtonItem!
-    fileprivate var topNavigationLeftImage: UIImage?
     weak var drawerDelegate: RootViewControllerDelegate?
 
-    public init(mainViewController: UIViewController, topNavigationLeftImage: UIImage?) {
-        super.init(rootViewController: mainViewController)
-        self.topNavigationLeftImage = topNavigationLeftImage
-        menuButton = UIBarButtonItem(image: topNavigationLeftImage, style: .plain, target: self, action: #selector(handleMenuButton))
-    }
+//    public init(mainViewController: UIViewController) {
+//        super.init(rootViewController: mainViewController)
+//
+//    }
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,6 +30,8 @@ class RootViewController: UINavigationController, UINavigationControllerDelegate
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+
+        menuButton = UIBarButtonItem(image: UIImage(named: "hamburger-menu-icon"), style: .plain, target: self, action: #selector(handleMenuButton))
         self.delegate = self
     }
 

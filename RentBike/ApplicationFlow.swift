@@ -17,7 +17,6 @@ class ApplicationFlow {
 
     func start() {
         mapFlow.start()
-        //profileFlow.start()
         
 		startMain()
 //		if Profile.isAuthorized {

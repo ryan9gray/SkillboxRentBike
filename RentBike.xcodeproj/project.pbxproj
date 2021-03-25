@@ -346,7 +346,6 @@
 		25203C9525EA62B2000BE950 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				256E333C2608A9AA000C679F /* DrawerController.swift */,
 				250ECDA525F51C0C006EA881 /* LayoutHelper.swift */,
 				25203C9625EA62B2000BE950 /* NetworkManager.swift */,
 				25203C9725EA62B2000BE950 /* ViewHierarchyWorker.swift */,
@@ -440,13 +439,14 @@
 		256E33412608A9C1000C679F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				256E333C2608A9AA000C679F /* DrawerController.swift */,
+				256E33542608AA94000C679F /* RootViewController.swift */,
+				256E33462608A9EB000C679F /* MenuViewController.swift */,
 				256E33422608A9EB000C679F /* MenuPresenter.swift */,
 				256E33432608A9EB000C679F /* MenuWorker.swift */,
 				256E33442608A9EB000C679F /* MenuRouter.swift */,
 				256E33452608A9EB000C679F /* MenuModels.swift */,
-				256E33462608A9EB000C679F /* MenuViewController.swift */,
 				256E33472608A9EB000C679F /* MenuInteractor.swift */,
-				256E33542608AA94000C679F /* RootViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
