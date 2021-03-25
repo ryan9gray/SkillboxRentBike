@@ -8,10 +8,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Menu View Controller-->
+        <scene sceneID="oBo-OL-EWh">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="Mzj-xO-fZb" customClass="MenuViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gyg-xK-HZ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="eLd-Yd-7ME"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aEw-aL-Co9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDS-rh-3f4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="138"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="akt-aw-8su">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="kem-Qm-SOo" customClass="MainViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="kem-Qm-SOo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NLg-Zc-apf"/>
                         <viewControllerLayoutGuide type="bottom" id="nbC-xl-n5E"/>
