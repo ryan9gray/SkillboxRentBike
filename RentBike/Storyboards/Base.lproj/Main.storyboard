@@ -35,6 +35,11 @@
                                     <constraint firstAttribute="height" constant="120" id="TtR-F2-hJn"/>
                                     <constraint firstAttribute="width" constant="120" id="wzp-vQ-Z5s"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVE-hW-NTQ">
                                 <rect key="frame" x="20" y="804" width="63" height="34"/>
@@ -73,13 +78,166 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KDx-4Q-LTa">
+                                <rect key="frame" x="20" y="363" width="185" height="185"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eBJ-HN-S2a">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="185"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhm-s1-QPc" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поездки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtU-gU-fAe">
+                                                        <rect key="frame" x="1" y="37.5" width="88" height="15"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="dtU-gU-fAe" firstAttribute="centerX" secondItem="Dhm-s1-QPc" secondAttribute="centerX" id="V2j-ck-s7j"/>
+                                                    <constraint firstItem="dtU-gU-fAe" firstAttribute="centerY" secondItem="Dhm-s1-QPc" secondAttribute="centerY" id="lks-rf-CcJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dtU-gU-fAe" secondAttribute="trailing" constant="1" id="osr-pw-bzs"/>
+                                                    <constraint firstAttribute="height" constant="90" id="w4n-dA-Wgu"/>
+                                                    <constraint firstAttribute="width" constant="90" id="zPa-hz-Tvf"/>
+                                                    <constraint firstItem="dtU-gU-fAe" firstAttribute="leading" secondItem="Dhm-s1-QPc" secondAttribute="leading" constant="1" id="zcU-FB-dfX"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ridesTap:" destination="Mzj-xO-fZb" eventType="touchUpInside" id="B00-1q-jQN"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ox-iw-WAF" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="95" width="90" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пополнить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydU-F6-58V">
+                                                        <rect key="frame" x="1" y="37.5" width="88" height="15"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="ydU-F6-58V" firstAttribute="leading" secondItem="9Ox-iw-WAF" secondAttribute="leading" constant="1" id="5fK-MZ-oIF"/>
+                                                    <constraint firstItem="ydU-F6-58V" firstAttribute="centerX" secondItem="9Ox-iw-WAF" secondAttribute="centerX" id="CoC-e2-qPI"/>
+                                                    <constraint firstAttribute="height" constant="90" id="L89-J4-onL"/>
+                                                    <constraint firstAttribute="width" constant="90" id="aoh-Mk-wVI"/>
+                                                    <constraint firstItem="ydU-F6-58V" firstAttribute="centerY" secondItem="9Ox-iw-WAF" secondAttribute="centerY" id="frK-aH-g2H"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ydU-F6-58V" secondAttribute="trailing" constant="1" id="o48-4k-gog"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="walletTap:" destination="Mzj-xO-fZb" eventType="touchUpInside" id="cfk-hB-fPo"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HwQ-qn-nCM">
+                                        <rect key="frame" x="95" y="0.0" width="90" height="185"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBu-mH-rr5" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Промокод" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHY-lH-gCf">
+                                                        <rect key="frame" x="1" y="37.5" width="88" height="15"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="zHY-lH-gCf" firstAttribute="leading" secondItem="WBu-mH-rr5" secondAttribute="leading" constant="1" id="0ks-re-cNj"/>
+                                                    <constraint firstAttribute="width" constant="90" id="9RU-7i-nrl"/>
+                                                    <constraint firstItem="zHY-lH-gCf" firstAttribute="centerY" secondItem="WBu-mH-rr5" secondAttribute="centerY" id="D9f-cQ-s59"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zHY-lH-gCf" secondAttribute="trailing" constant="1" id="MmQ-a9-CdA"/>
+                                                    <constraint firstItem="zHY-lH-gCf" firstAttribute="centerX" secondItem="WBu-mH-rr5" secondAttribute="centerX" id="fFu-ct-TBi"/>
+                                                    <constraint firstAttribute="height" constant="90" id="zGN-0U-1dw"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="promoCodeTap:" destination="Mzj-xO-fZb" eventType="touchUpInside" id="dlf-jt-nqG"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kr7-JR-kqe" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="95" width="90" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faq" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvP-l3-mQj">
+                                                        <rect key="frame" x="1" y="37.5" width="88" height="15"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="5CC-Wn-XJi"/>
+                                                    <constraint firstItem="YvP-l3-mQj" firstAttribute="centerX" secondItem="Kr7-JR-kqe" secondAttribute="centerX" id="O8u-QV-dHo"/>
+                                                    <constraint firstAttribute="height" constant="90" id="TjB-Q5-ivq"/>
+                                                    <constraint firstItem="YvP-l3-mQj" firstAttribute="leading" secondItem="Kr7-JR-kqe" secondAttribute="leading" constant="1" id="doz-Ll-gJf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YvP-l3-mQj" secondAttribute="trailing" constant="1" id="fYa-iI-9dA"/>
+                                                    <constraint firstItem="YvP-l3-mQj" firstAttribute="centerY" secondItem="Kr7-JR-kqe" secondAttribute="centerY" id="tCO-0B-Jka"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="faqTap:" destination="Mzj-xO-fZb" eventType="touchUpInside" id="VuG-We-aqN"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S2J-hR-ui1" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="BvI-VD-47s"/>
                             <constraint firstItem="fX4-a7-ieh" firstAttribute="top" secondItem="gyg-xK-HZ2" secondAttribute="bottom" constant="48" id="FuF-WE-M4g"/>
                             <constraint firstItem="IVE-hW-NTQ" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="GUR-tb-NL0"/>
+                            <constraint firstItem="KDx-4Q-LTa" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="Hgz-rj-tgO"/>
                             <constraint firstItem="S2J-hR-ui1" firstAttribute="top" secondItem="fX4-a7-ieh" secondAttribute="bottom" constant="24" id="Pjl-fe-m8h"/>
+                            <constraint firstItem="KDx-4Q-LTa" firstAttribute="top" secondItem="S2J-hR-ui1" secondAttribute="bottom" constant="24" id="Z94-vq-qow"/>
                             <constraint firstItem="eLd-Yd-7ME" firstAttribute="top" secondItem="IVE-hW-NTQ" secondAttribute="bottom" constant="24" id="ctn-7x-FWf"/>
                             <constraint firstItem="fX4-a7-ieh" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="gXf-P1-iFO"/>
                         </constraints>
@@ -267,14 +425,26 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="9Ox-iw-WAF">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
         <designable name="CBV-q8-A9e">
             <size key="intrinsicContentSize" width="64" height="64"/>
+        </designable>
+        <designable name="Dhm-s1-QPc">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
         <designable name="E1c-wW-4dN">
             <size key="intrinsicContentSize" width="24.5" height="23.5"/>
         </designable>
+        <designable name="Kr7-JR-kqe">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
         <designable name="VdI-IT-lsb">
             <size key="intrinsicContentSize" width="64" height="64"/>
+        </designable>
+        <designable name="WBu-mH-rr5">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
         <designable name="ejv-9K-meH">
             <size key="intrinsicContentSize" width="64" height="64"/>

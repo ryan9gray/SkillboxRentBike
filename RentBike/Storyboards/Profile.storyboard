@@ -105,6 +105,70 @@
             </objects>
             <point key="canvasLocation" x="313" y="-50"/>
         </scene>
+        <!--Wallet View Controller-->
+        <scene sceneID="dGf-iR-nca">
+            <objects>
+                <viewController storyboardIdentifier="WalletViewController" id="XTz-hI-pc2" customClass="WalletViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ked-eV-wj4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bTL-0u-t8l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7c-sh-k0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="-50"/>
+        </scene>
+        <!--Rides View Controller-->
+        <scene sceneID="2Na-SS-M15">
+            <objects>
+                <viewController storyboardIdentifier="RidesViewController" id="qfX-Yu-F07" customClass="RidesViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="is9-dm-OqP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="M7b-MR-Dk3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXs-hZ-v8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1758" y="-50"/>
+        </scene>
+        <!--Promo View Controller-->
+        <scene sceneID="7yl-4M-SQn">
+            <objects>
+                <viewController storyboardIdentifier="PromoViewController" id="Mml-GP-yoU" customClass="PromoViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CBp-0k-8KJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOL-ZY-hxa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mml-GP-yoU" id="ooJ-1E-Qvv"/>
+                                    <outlet property="delegate" destination="Mml-GP-yoU" id="KXB-os-79p"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="faf-UK-QSd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VOL-ZY-hxa" firstAttribute="leading" secondItem="faf-UK-QSd" secondAttribute="leading" id="40a-yq-1Mh"/>
+                            <constraint firstItem="faf-UK-QSd" firstAttribute="trailing" secondItem="VOL-ZY-hxa" secondAttribute="trailing" id="6Mq-Cl-oAt"/>
+                            <constraint firstItem="VOL-ZY-hxa" firstAttribute="top" secondItem="faf-UK-QSd" secondAttribute="top" id="Jew-iI-lgm"/>
+                            <constraint firstItem="faf-UK-QSd" firstAttribute="bottom" secondItem="VOL-ZY-hxa" secondAttribute="bottom" id="l2l-qZ-Gnd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VOL-ZY-hxa" id="0M6-iG-BBU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6m-Z1-vZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="-50"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icCamera" width="24" height="24"/>

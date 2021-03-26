@@ -26,10 +26,22 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
     @IBOutlet var distansLabel: UILabel!
     @IBOutlet var ridesLabel: UILabel!
 
+    @IBAction func ridesTap(_ sender: Any) {
+        
+    }
+    @IBAction func walletTap(_ sender: Any) {
+
+    }
     @IBAction func logoutTap(_ sender: Any) {
 
     }
+    @IBAction func promoCodeTap(_ sender: Any) {
 
+    }
+    @IBAction func faqTap(_ sender: Any) {
+
+    }
+    
     // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
