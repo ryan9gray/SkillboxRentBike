@@ -43,9 +43,7 @@ class NetworkService {
         completion: @escaping (Result<Void>) -> Void,
         onProgress: @escaping (Double) -> Void
     ) {
-        guard
-            let id = Profile.current?.profileId
-        else { return }
+        guard let id = Profile.current?.profileId else { return }
 
         AF.upload(
             multipartFormData: { multipartFormData in
@@ -61,7 +59,6 @@ class NetworkService {
             }
         ).responseJSON { response in
             debugPrint(response)
-
         }
     }
 

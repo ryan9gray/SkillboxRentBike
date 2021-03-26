@@ -50,9 +50,6 @@ class AuthFlow {
             )
         ){ [weak self] profile in
             self?.login(login: login, pass: pass)
-//            if profile != nil {
-//                ApplicationFlow.shared.startMain()
-//            }
         }
     }
     func login(login: String, pass: String) {
@@ -68,7 +65,6 @@ class AuthFlow {
             }
         }
     }
-
 
     func createInitialViewController() -> UIViewController {
         let controller = AuthViewController.instantiate(fromStoryboard: .autorization)

@@ -25,7 +25,14 @@ class ProfileFlow {
 
     private func createInitialViewController() -> UIViewController {
         let controller = ProfileViewController.instantiate(fromStoryboard: .profile)
-
+        controller.output = .init(
+            logout: logout,
+            getAvatar: getProfile,
+            upload: uploadImage
+            //            infoOpen: { [weak controller] in
+            //                self.openInfo(from: controller)
+            //            }
+        )
         
         return controller
     }

@@ -85,6 +85,7 @@ PODS:
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
+  - SwiftSocket (2.0.2)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - SDWebImage
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - SQLite.swift
+  - SwiftSocket
   - SwiftyJSON
 
 SPEC REPOS:
@@ -120,6 +122,7 @@ SPEC REPOS:
     - PromisesObjC
     - SDWebImage
     - SQLite.swift
+    - SwiftSocket
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -152,8 +155,9 @@ SPEC CHECKSUMS:
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 43bc44a1fbdf83ad8676eb022b93560cecec674c
+PODFILE CHECKSUM: 9b646f868185857ab96c37090ef0550a297d1d58
 
 COCOAPODS: 1.10.0

@@ -12,6 +12,10 @@
 		250ECD4B25F4E404006EA881 /* Bikes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 250ECD4A25F4E404006EA881 /* Bikes.geojson */; };
 		250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD5825F4F632006EA881 /* RoundButton.swift */; };
 		250ECDA625F51C0C006EA881 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECDA525F51C0C006EA881 /* LayoutHelper.swift */; };
+		251B84FF260E32A70019B54B /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B84FE260E32A70019B54B /* Wallet.swift */; };
+		251B8504260E366E0019B54B /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B8503260E366E0019B54B /* Ride.swift */; };
+		251B850C260E38D60019B54B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251B850B260E38D60019B54B /* Profile.storyboard */; };
+		251B8511260E39250019B54B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251B8510260E39250019B54B /* Auth.storyboard */; };
 		25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C0525EA5F14000BE950 /* AppDelegate.swift */; };
 		25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0B25EA5F14000BE950 /* Main.storyboard */; };
 		25203C0F25EA5F16000BE950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25203C0E25EA5F16000BE950 /* Assets.xcassets */; };
@@ -57,6 +61,7 @@
 		25203CD725EA8DAB000BE950 /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CD625EA8DAB000BE950 /* ProfileFlow.swift */; };
 		25203CDF25EA8DE0000BE950 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */; };
 		25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CE325EA8EE2000BE950 /* MapViewController.swift */; };
+		252BD38D260CDB3D009B2EAF /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252BD38C260CDB3D009B2EAF /* SocketService.swift */; };
 		2554724425EA9F10003C806F /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554723125EA9F10003C806F /* Montserrat-LightItalic.ttf */; };
 		2554724525EA9F10003C806F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554723225EA9F10003C806F /* Montserrat-Medium.ttf */; };
 		2554724625EA9F10003C806F /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554723325EA9F10003C806F /* Montserrat-BoldItalic.ttf */; };
@@ -112,6 +117,10 @@
 		250ECD5825F4F632006EA881 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		250ECD6025F500A0006EA881 /* LocationMock.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationMock.gpx; sourceTree = "<group>"; };
 		250ECDA525F51C0C006EA881 /* LayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
+		251B84FE260E32A70019B54B /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		251B8503260E366E0019B54B /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		251B850B260E38D60019B54B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		251B8510260E39250019B54B /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		25203C0225EA5F14000BE950 /* RentBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25203C0525EA5F14000BE950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25203C0C25EA5F14000BE950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +172,7 @@
 		25203CD625EA8DAB000BE950 /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
 		25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		25203CE325EA8EE2000BE950 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		252BD38C260CDB3D009B2EAF /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		2554723125EA9F10003C806F /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		2554723225EA9F10003C806F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		2554723325EA9F10003C806F /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -284,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				25203C0B25EA5F14000BE950 /* Main.storyboard */,
+				251B850B260E38D60019B54B /* Profile.storyboard */,
+				251B8510260E39250019B54B /* Auth.storyboard */,
 				250ECD4A25F4E404006EA881 /* Bikes.geojson */,
 				2554723025EA9F10003C806F /* Montserrat */,
 				25203C0E25EA5F16000BE950 /* Assets.xcassets */,
@@ -316,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				25203CC725EA655F000BE950 /* Result.swift */,
+				252BD38C260CDB3D009B2EAF /* SocketService.swift */,
 				25203C8C25EA62B2000BE950 /* NetworkService.swift */,
 				256E33592608ACA2000C679F /* LocationTracker.swift */,
 			);
@@ -372,6 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				25203CB025EA62EF000BE950 /* Profile.swift */,
+				251B8503260E366E0019B54B /* Ride.swift */,
+				251B84FE260E32A70019B54B /* Wallet.swift */,
 				250ECD3D25F4E144006EA881 /* Bike.swift */,
 				250ECD4525F4E2D2006EA881 /* BikeView.swift */,
 			);
@@ -576,6 +591,7 @@
 			files = (
 				2554725525EA9F10003C806F /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				2554725125EA9F10003C806F /* OFL.txt in Resources */,
+				251B8511260E39250019B54B /* Auth.storyboard in Resources */,
 				2554724A25EA9F10003C806F /* Montserrat-Thin.ttf in Resources */,
 				2554724725EA9F10003C806F /* Montserrat-Light.ttf in Resources */,
 				2554724F25EA9F10003C806F /* Montserrat-ExtraLightItalic.ttf in Resources */,
@@ -592,6 +608,7 @@
 				2554724E25EA9F10003C806F /* Montserrat-SemiBold.ttf in Resources */,
 				2554725425EA9F10003C806F /* Montserrat-Italic.ttf in Resources */,
 				2554724B25EA9F10003C806F /* Montserrat-Bold.ttf in Resources */,
+				251B850C260E38D60019B54B /* Profile.storyboard in Resources */,
 				2554724C25EA9F10003C806F /* Montserrat-MediumItalic.ttf in Resources */,
 				25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */,
 				2554725225EA9F10003C806F /* Montserrat-Black.ttf in Resources */,
@@ -688,6 +705,7 @@
 				250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */,
 				25203C8425EA6262000BE950 /* UIImageView+SD.swift in Sources */,
 				25203C7B25EA6262000BE950 /* UIColor.swift in Sources */,
+				252BD38D260CDB3D009B2EAF /* SocketService.swift in Sources */,
 				25203CBE25EA6503000BE950 /* AppCacher.swift in Sources */,
 				25203CA825EA62B2000BE950 /* Style.swift in Sources */,
 				25203C7D25EA6262000BE950 /* UITableView.swift in Sources */,
@@ -704,6 +722,7 @@
 				25203C9D25EA62B2000BE950 /* ApplicationFlow.swift in Sources */,
 				25203CAA25EA62B2000BE950 /* FormKeyboardBehavior.swift in Sources */,
 				25203C8225EA6262000BE950 /* UIViewController.swift in Sources */,
+				251B84FF260E32A70019B54B /* Wallet.swift in Sources */,
 				25203C7E25EA6262000BE950 /* UITableViewCell.swift in Sources */,
 				25203CDF25EA8DE0000BE950 /* ProfileViewController.swift in Sources */,
 				25203CBF25EA6503000BE950 /* CacherType.swift in Sources */,
@@ -719,6 +738,7 @@
 				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
 				256E33482608A9EB000C679F /* MenuPresenter.swift in Sources */,
 				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
+				251B8504260E366E0019B54B /* Ride.swift in Sources */,
 				25203CC025EA6503000BE950 /* LocationCacher.swift in Sources */,
 				25203CA125EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */,
@@ -909,6 +929,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
@@ -919,6 +940,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.rent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -930,6 +952,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
@@ -940,6 +963,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.rent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

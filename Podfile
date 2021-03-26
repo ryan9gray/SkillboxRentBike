@@ -10,6 +10,8 @@ pod 'AlamofireImage'
 pod 'SwiftyJSON'
 pod 'ObjectMapper'
 pod 'SDWebImage'
+pod 'SwiftSocket'
+
 # UI
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 

@@ -30,10 +30,8 @@ class Bike: NSObject, MKAnnotation {
     }
 
     init?(feature: MKGeoJSONFeature) {
-        // 1
         guard
             let point = feature.geometry.first as? MKPointAnnotation,
-            // 2
             let propertiesData = feature.properties,
             let json = try? JSONSerialization.jsonObject(with: propertiesData),
             let properties = json as? [String: Any]
@@ -41,7 +39,6 @@ class Bike: NSObject, MKAnnotation {
             return nil
         }
 
-        // 3
         title = properties["title"] as? String
         locationName = properties["location"] as? String
         discipline = properties["discipline"] as? String
@@ -54,14 +51,13 @@ class Bike: NSObject, MKAnnotation {
     }
 
     var mapItem: MKMapItem? {
-        guard let location = locationName else {
-            return nil
-        }
+        guard let location = locationName else { return nil }
 
         let addressDict = [CNPostalAddressStreetKey: location]
         let placemark = MKPlacemark(
             coordinate: coordinate,
-            addressDictionary: addressDict)
+            addressDictionary: addressDict
+        )
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = title
         return mapItem
@@ -72,7 +68,6 @@ class Bike: NSObject, MKAnnotation {
     }
 
     var image: UIImage {
-        
-        return UIImage(named: "bike64Orange")!
+        UIImage(named: "bike64Orange")!
     }
 }

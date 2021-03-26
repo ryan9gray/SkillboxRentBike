@@ -212,7 +212,7 @@
                                                     <constraint firstAttribute="width" secondItem="E1c-wW-4dN" secondAttribute="height" multiplier="1:1" id="lCD-Z3-Fx5"/>
                                                 </constraints>
                                                 <state key="normal">
-                                                    <imageReference key="image" image="location.fill" catalog="system" symbolScale="large"/>
+                                                    <imageReference key="image" image="location.fill" catalog="system" symbolScale="large" renderingMode="original"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">

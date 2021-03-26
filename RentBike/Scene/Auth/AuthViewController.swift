@@ -17,8 +17,6 @@ import GoogleSignIn
 
 class AuthViewController: UIViewController {
 
-    // MARK: Object lifecycle
-
     @IBOutlet var loginTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     @IBOutlet var loginButton: UIButton!

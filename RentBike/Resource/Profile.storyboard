@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="Qea-yH-0Xl">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="RvG-e7-zD1" customClass="ProfileViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0c-ca-AoX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-f7-Ftc">
+                                <rect key="frame" x="16" y="796" width="382" height="50"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.2901960784" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pag-4V-F8k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Log Out"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logOutTap:" destination="RvG-e7-zD1" eventType="touchUpInside" id="sg6-aO-Ugd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dl4-Ac-MyA">
+                                <rect key="frame" x="147" y="104" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="W0y-P0-dFq"/>
+                                    <constraint firstAttribute="width" constant="120" id="ogd-J5-OMD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GKt-4G-9Wz">
+                                <rect key="frame" x="185.5" y="264" width="43.5" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29b-tm-f5V">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTf-9q-64m">
+                                        <rect key="frame" x="0.0" y="36.5" width="43.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-dE-xfJ">
+                                <rect key="frame" x="243" y="200" width="24" height="24"/>
+                                <state key="normal" image="icEditAvatar"/>
+                                <connections>
+                                    <action selector="editAvatarTap:" destination="RvG-e7-zD1" eventType="touchUpInside" id="At4-F9-8B9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-kv-Uw2">
+                                <rect key="frame" x="147" y="200" width="24" height="24"/>
+                                <state key="normal" image="icCamera"/>
+                                <connections>
+                                    <action selector="camTap:" destination="RvG-e7-zD1" eventType="touchUpInside" id="ydQ-X7-Fp3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qSW-eI-67O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qSW-eI-67O" firstAttribute="trailing" secondItem="jdy-f7-Ftc" secondAttribute="trailing" constant="16" id="2P4-sO-Edx"/>
+                            <constraint firstItem="Dl4-Ac-MyA" firstAttribute="top" secondItem="qSW-eI-67O" secondAttribute="top" constant="60" id="3vH-Fy-mKC"/>
+                            <constraint firstItem="hyo-kv-Uw2" firstAttribute="bottom" secondItem="Dl4-Ac-MyA" secondAttribute="bottom" id="48a-2k-fhi"/>
+                            <constraint firstItem="GKt-4G-9Wz" firstAttribute="centerX" secondItem="u0c-ca-AoX" secondAttribute="centerX" id="6us-KA-X32"/>
+                            <constraint firstItem="Dl4-Ac-MyA" firstAttribute="leading" secondItem="qSW-eI-67O" secondAttribute="leading" constant="147" id="ONa-mf-T9d"/>
+                            <constraint firstItem="Dl4-Ac-MyA" firstAttribute="leading" secondItem="hyo-kv-Uw2" secondAttribute="leading" id="TFj-ap-cja"/>
+                            <constraint firstItem="GKt-4G-9Wz" firstAttribute="top" secondItem="Dl4-Ac-MyA" secondAttribute="bottom" constant="40" id="XNl-4g-8Fb"/>
+                            <constraint firstItem="jdy-f7-Ftc" firstAttribute="leading" secondItem="qSW-eI-67O" secondAttribute="leading" constant="16" id="iWr-GZ-DdF"/>
+                            <constraint firstItem="pkg-dE-xfJ" firstAttribute="trailing" secondItem="Dl4-Ac-MyA" secondAttribute="trailing" id="nid-v4-ol7"/>
+                            <constraint firstItem="qSW-eI-67O" firstAttribute="bottom" secondItem="jdy-f7-Ftc" secondAttribute="bottom" constant="16" id="oVS-Ue-GdY"/>
+                            <constraint firstItem="pkg-dE-xfJ" firstAttribute="bottom" secondItem="Dl4-Ac-MyA" secondAttribute="bottom" id="u6T-aV-5ig"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="tTf-9q-64m" id="wCN-Ia-Hkb"/>
+                        <outlet property="avatarXConstraint" destination="ONa-mf-T9d" id="4L9-5T-4Pn"/>
+                        <outlet property="imageView" destination="Dl4-Ac-MyA" id="NOD-uW-dIh"/>
+                        <outlet property="nameLabel" destination="29b-tm-f5V" id="E9O-vG-l7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHx-tG-Osy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-50"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icCamera" width="24" height="24"/>
+        <image name="icEditAvatar" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

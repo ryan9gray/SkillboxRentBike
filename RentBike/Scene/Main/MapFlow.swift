@@ -45,7 +45,3 @@ class MapFlow {
 
     }
 }
-
-struct RideStat {
-    
-}
