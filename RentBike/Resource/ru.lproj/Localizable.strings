@@ -32,3 +32,5 @@
 "registrate" = "Регестрация";
 "login" = "Логин";
 "password" = "Пароль";
+"promocode" = "Промокод";
+"done" = "Готово";

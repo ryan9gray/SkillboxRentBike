@@ -9,9 +9,18 @@ import UIKit
 
 class PromoViewController: UIViewController {
     
+    @IBOutlet var promoTextField: UITextField!
+    @IBOutlet var doneButton: UIButton!
+
+    @IBAction func doneTap(_ sender: Any) {
+
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        promoTextField.placeholder = "promocode".localized
+        doneButton.setTitle("done".localized, for: .normal)
     }
+    
 }

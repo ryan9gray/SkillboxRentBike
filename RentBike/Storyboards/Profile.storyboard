@@ -138,6 +138,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="qfX-Yu-F07" id="FWw-82-WMH"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzH-6J-kwf">
                                         <rect key="frame" x="0.0" y="56" width="366" height="50"/>
@@ -152,6 +155,9 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneTap:" destination="qfX-Yu-F07" eventType="touchUpInside" id="64L-jJ-Vfh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -164,6 +170,10 @@
                             <constraint firstItem="AtT-iN-UQc" firstAttribute="leading" secondItem="is9-dm-OqP" secondAttribute="leading" constant="24" id="UmC-oM-rYb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="LzH-6J-kwf" id="rAN-hE-02D"/>
+                        <outlet property="promoTextField" destination="ab7-RZ-HV7" id="KTD-ip-ERJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXs-hZ-v8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
