@@ -8,7 +8,6 @@
 import UIKit
 
 class PromoViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

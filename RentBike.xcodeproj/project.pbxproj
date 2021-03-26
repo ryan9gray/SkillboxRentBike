@@ -93,6 +93,7 @@
 		257AE84D260E3F0700660A1A /* RidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE84C260E3F0700660A1A /* RidesViewController.swift */; };
 		257AE852260E3F1200660A1A /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE851260E3F1200660A1A /* WalletViewController.swift */; };
 		257AE857260E3F5D00660A1A /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE856260E3F5D00660A1A /* PromoViewController.swift */; };
+		257AE864260E422D00660A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 257AE866260E422D00660A1A /* Localizable.strings */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -207,6 +208,8 @@
 		257AE84C260E3F0700660A1A /* RidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesViewController.swift; sourceTree = "<group>"; };
 		257AE851260E3F1200660A1A /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		257AE856260E3F5D00660A1A /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
+		257AE865260E422D00660A1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		257AE86A260E42A700660A1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
 		AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,6 +318,7 @@
 				25203C0E25EA5F16000BE950 /* Assets.xcassets */,
 				25203C1325EA5F16000BE950 /* Info.plist */,
 				250ECD6025F500A0006EA881 /* LocationMock.gpx */,
+				257AE866260E422D00660A1A /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -596,6 +600,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 25203BF925EA5F14000BE950;
 			productRefGroup = 25203C0325EA5F14000BE950 /* Products */;
@@ -623,6 +628,7 @@
 				2554724625EA9F10003C806F /* Montserrat-BoldItalic.ttf in Resources */,
 				2554724825EA9F10003C806F /* Montserrat-ThinItalic.ttf in Resources */,
 				2554725025EA9F10003C806F /* Montserrat-ExtraBold.ttf in Resources */,
+				257AE864260E422D00660A1A /* Localizable.strings in Resources */,
 				2554725325EA9F10003C806F /* Montserrat-Regular.ttf in Resources */,
 				2554724425EA9F10003C806F /* Montserrat-LightItalic.ttf in Resources */,
 				2554724925EA9F10003C806F /* Montserrat-ExtraLight.ttf in Resources */,
@@ -832,6 +838,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		257AE866260E422D00660A1A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				257AE865260E422D00660A1A /* en */,
+				257AE86A260E42A700660A1A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -839,6 +854,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -900,6 +916,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

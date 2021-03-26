@@ -120,25 +120,59 @@
             </objects>
             <point key="canvasLocation" x="1036" y="-50"/>
         </scene>
-        <!--Rides View Controller-->
+        <!--Promo View Controller-->
         <scene sceneID="2Na-SS-M15">
             <objects>
-                <viewController storyboardIdentifier="RidesViewController" id="qfX-Yu-F07" customClass="RidesViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PromoViewController" id="qfX-Yu-F07" customClass="PromoViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="is9-dm-OqP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AtT-iN-UQc">
+                                <rect key="frame" x="24" y="68" width="366" height="106"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promocode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-RZ-HV7">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="TQH-DC-V3P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzH-6J-kwf">
+                                        <rect key="frame" x="0.0" y="56" width="366" height="50"/>
+                                        <color key="backgroundColor" red="0.8862745098" green="0.2901960784" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZB8-uG-AbO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Готово"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="M7b-MR-Dk3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AtT-iN-UQc" firstAttribute="top" secondItem="M7b-MR-Dk3" secondAttribute="top" constant="24" id="0LQ-CV-sfe"/>
+                            <constraint firstItem="M7b-MR-Dk3" firstAttribute="trailing" secondItem="AtT-iN-UQc" secondAttribute="trailing" constant="24" id="I7g-Ae-Qcj"/>
+                            <constraint firstItem="AtT-iN-UQc" firstAttribute="leading" secondItem="is9-dm-OqP" secondAttribute="leading" constant="24" id="UmC-oM-rYb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXs-hZ-v8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1758" y="-50"/>
         </scene>
-        <!--Promo View Controller-->
+        <!--Rides View Controller-->
         <scene sceneID="7yl-4M-SQn">
             <objects>
-                <viewController storyboardIdentifier="PromoViewController" id="Mml-GP-yoU" customClass="PromoViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RidesViewController" id="Mml-GP-yoU" customClass="RidesViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CBp-0k-8KJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +196,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="VOL-ZY-hxa" id="0M6-iG-BBU"/>
+                        <outlet property="tableView" destination="VOL-ZY-hxa" id="Qs9-GE-Kp9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6m-Z1-vZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
