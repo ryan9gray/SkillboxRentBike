@@ -62,6 +62,10 @@
 		25203CDF25EA8DE0000BE950 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */; };
 		25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203CE325EA8EE2000BE950 /* MapViewController.swift */; };
 		252BD38D260CDB3D009B2EAF /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252BD38C260CDB3D009B2EAF /* SocketService.swift */; };
+		25312473260F503900C163E2 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25312471260F503900C163E2 /* TitleTableViewCell.swift */; };
+		25312474260F503900C163E2 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25312472260F503900C163E2 /* TitleTableViewCell.xib */; };
+		25312493260F5C7C00C163E2 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25312492260F5C7C00C163E2 /* MenuService.swift */; };
+		25312498260F5F0100C163E2 /* MenuFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25312497260F5F0100C163E2 /* MenuFlow.swift */; };
 		2554724425EA9F10003C806F /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554723125EA9F10003C806F /* Montserrat-LightItalic.ttf */; };
 		2554724525EA9F10003C806F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554723225EA9F10003C806F /* Montserrat-Medium.ttf */; };
 		2554724625EA9F10003C806F /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2554723325EA9F10003C806F /* Montserrat-BoldItalic.ttf */; };
@@ -177,6 +181,10 @@
 		25203CDE25EA8DE0000BE950 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		25203CE325EA8EE2000BE950 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		252BD38C260CDB3D009B2EAF /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		25312471260F503900C163E2 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		25312472260F503900C163E2 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		25312492260F5C7C00C163E2 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		25312497260F5F0100C163E2 /* MenuFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFlow.swift; sourceTree = "<group>"; };
 		2554723125EA9F10003C806F /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		2554723225EA9F10003C806F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		2554723325EA9F10003C806F /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -345,6 +353,7 @@
 		25203C8B25EA62B2000BE950 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				25312492260F5C7C00C163E2 /* MenuService.swift */,
 				25203CC725EA655F000BE950 /* Result.swift */,
 				252BD38C260CDB3D009B2EAF /* SocketService.swift */,
 				25203C8C25EA62B2000BE950 /* NetworkService.swift */,
@@ -360,6 +369,8 @@
 				25203C8F25EA62B2000BE950 /* UITextField+fixCaretPosition.swift */,
 				25203C9025EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift */,
 				250ECD5825F4F632006EA881 /* RoundButton.swift */,
+				25312471260F503900C163E2 /* TitleTableViewCell.swift */,
+				25312472260F503900C163E2 /* TitleTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				257AE84C260E3F0700660A1A /* RidesViewController.swift */,
+				25312497260F5F0100C163E2 /* MenuFlow.swift */,
 				257AE851260E3F1200660A1A /* WalletViewController.swift */,
 				257AE856260E3F5D00660A1A /* PromoViewController.swift */,
 			);
@@ -643,6 +655,7 @@
 				2554724C25EA9F10003C806F /* Montserrat-MediumItalic.ttf in Resources */,
 				25203C0D25EA5F14000BE950 /* Main.storyboard in Resources */,
 				2554725225EA9F10003C806F /* Montserrat-Black.ttf in Resources */,
+				25312474260F503900C163E2 /* TitleTableViewCell.xib in Resources */,
 				250ECD4B25F4E404006EA881 /* Bikes.geojson in Resources */,
 				2554725625EA9F10003C806F /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 			);
@@ -734,7 +747,9 @@
 				25203CB125EA62EF000BE950 /* Profile.swift in Sources */,
 				25203C7A25EA6262000BE950 /* UIView.swift in Sources */,
 				250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */,
+				25312498260F5F0100C163E2 /* MenuFlow.swift in Sources */,
 				25203C8425EA6262000BE950 /* UIImageView+SD.swift in Sources */,
+				25312493260F5C7C00C163E2 /* MenuService.swift in Sources */,
 				25203C7B25EA6262000BE950 /* UIColor.swift in Sources */,
 				252BD38D260CDB3D009B2EAF /* SocketService.swift in Sources */,
 				25203CBE25EA6503000BE950 /* AppCacher.swift in Sources */,
@@ -768,6 +783,7 @@
 				256E33492608A9EB000C679F /* MenuWorker.swift in Sources */,
 				25203CA625EA62B2000BE950 /* ViewHierarchyWorker.swift in Sources */,
 				250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */,
+				25312473260F503900C163E2 /* TitleTableViewCell.swift in Sources */,
 				25203CA025EA62B2000BE950 /* UITextField+fixCaretPosition.swift in Sources */,
 				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
 				256E33482608A9EB000C679F /* MenuPresenter.swift in Sources */,

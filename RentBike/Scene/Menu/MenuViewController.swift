@@ -27,16 +27,16 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
     @IBOutlet var ridesLabel: UILabel!
 
     @IBAction func ridesTap(_ sender: Any) {
-        
+        router?.openRide()
     }
     @IBAction func walletTap(_ sender: Any) {
-
+        router?.openWallet()
     }
     @IBAction func logoutTap(_ sender: Any) {
 
     }
     @IBAction func promoCodeTap(_ sender: Any) {
-
+        router?.openPromo()
     }
     @IBAction func faqTap(_ sender: Any) {
 

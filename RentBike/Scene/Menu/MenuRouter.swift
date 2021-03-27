@@ -13,7 +13,9 @@
 import UIKit
 
 protocol MenuRoutingLogic {
-    
+    func openRide()
+    func openWallet()
+    func openPromo()
 }
 
 protocol MenuDataPassing {
@@ -21,9 +23,21 @@ protocol MenuDataPassing {
 }
 
 class MenuRouter: MenuRoutingLogic, MenuDataPassing {
-    weak var viewController: MenuViewController?
+    weak var viewController: MenuViewController!
     var dataStore: MenuDataStore?
 
     // MARK: Routing
 
+    func openRide() {
+        let flow = MenuFlow()
+        flow.rides(from: viewController)
+    }
+    func openWallet() {
+        let flow = MenuFlow()
+        flow.wallet(from: viewController)
+    }
+    func openPromo() {
+        let flow = MenuFlow()
+        flow.promo(from: viewController)
+    }
 }

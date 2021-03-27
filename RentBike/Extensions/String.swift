@@ -70,3 +70,12 @@ extension String {
 		return Data(self.utf8).base64EncodedString()
 	}
 }
+extension Date {
+
+    var longDateAndTime: String {
+        let outputFormatter = DateFormatter()
+        outputFormatter.timeZone = TimeZone.current
+        outputFormatter.dateFormat = "dd.MM.yyyy HH:mm"
+        return outputFormatter.string(from: self)
+    }
+}

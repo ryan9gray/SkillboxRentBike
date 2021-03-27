@@ -8,7 +8,12 @@
 import UIKit
 
 class WalletViewController: UIViewController {
+    @IBOutlet var promoTextField: UITextField!
+    @IBOutlet var doneButton: UIButton!
 
+    @IBAction func doneTap(_ sender: Any) {
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
