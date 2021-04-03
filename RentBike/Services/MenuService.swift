@@ -9,7 +9,7 @@ import Foundation
 
 struct MenuService {
 
-    func getRides(completion: ([RideStat]) -> Void) {
+    func getRides(completion: ([Ride]) -> Void) {
 
 
     }

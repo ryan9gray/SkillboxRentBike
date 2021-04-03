@@ -12,7 +12,7 @@ class BikeMarkerView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
             // 1
-            guard let artwork = newValue as? Bike else {
+            guard let artwork = newValue as? BikeAnnotataion else {
                 return
             }
             canShowCallout = true
@@ -29,7 +29,7 @@ class BikeMarkerView: MKMarkerAnnotationView {
 class BikeView: MKAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
-            guard let artwork = newValue as? Bike else {
+            guard let artwork = newValue as? BikeAnnotataion else {
                 return
             }
 

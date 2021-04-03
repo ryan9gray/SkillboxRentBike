@@ -1,73 +1,54 @@
 //
-//  Bike.swift
+//  Ride.swift
 //  RentBike
 //
-//  Created by Evgeny Ivanov on 07.03.2021.
+//  Created by Evgeny Ivanov on 26.03.2021.
 //
 
-import Foundation
-import MapKit
-import Contacts
+import ObjectMapper
 
-class Bike: NSObject, MKAnnotation {
-    let title: String?
-    let locationName: String?
-    let discipline: String?
-    let coordinate: CLLocationCoordinate2D
+class Bike: Mappable {
+    var lightOn: Bool = false
+    var isUnlock = false
 
-    init(
-        title: String?,
-        locationName: String?,
-        discipline: String?,
-        coordinate: CLLocationCoordinate2D
-    ) {
-        self.title = title
-        self.locationName = locationName
-        self.discipline = discipline
-        self.coordinate = coordinate
+    var status: Status = .free
 
-        super.init()
+    enum Status: Int {
+		case free = 0
+        case booked = 1
+        case inProgress = 2
     }
+    
+    init() { }
 
-    init?(feature: MKGeoJSONFeature) {
-        guard
-            let point = feature.geometry.first as? MKPointAnnotation,
-            let propertiesData = feature.properties,
-            let json = try? JSONSerialization.jsonObject(with: propertiesData),
-            let properties = json as? [String: Any]
-        else {
-            return nil
-        }
+    required init?(map: Map) {}
 
-        title = properties["title"] as? String
-        locationName = properties["location"] as? String
-        discipline = properties["discipline"] as? String
-        coordinate = point.coordinate
-        super.init()
+    func mapping(map: Map) {
+        status <- (map["status"], EnumTransform<Status>())
+        lightOn <- map["lightOn"]
+        isUnlock <- map["isLock"]
     }
+}
 
-    var subtitle: String? {
-        return locationName
+class Ride: Mappable {
+    var distance: Int = 0
+    var price: Int = 0
+    var dateStart: TimeInterval = 0
+    var dateEnd: TimeInterval = 0
+
+    init() { }
+
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        dateStart <- map["dateStart"]
+        dateEnd <- map["dateEnd"]
+        distance <- map["distance"]
+        price <- map["price"]
     }
+}
 
-    var mapItem: MKMapItem? {
-        guard let location = locationName else { return nil }
-
-        let addressDict = [CNPostalAddressStreetKey: location]
-        let placemark = MKPlacemark(
-            coordinate: coordinate,
-            addressDictionary: addressDict
-        )
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = title
-        return mapItem
-    }
-
-    var markerTintColor: UIColor  {
-        return Style.Color.midnight
-    }
-
-    var image: UIImage {
-        UIImage(named: "bike64Orange")!
-    }
+class BikeState {
+    var sec: Int = 0
+    
 }

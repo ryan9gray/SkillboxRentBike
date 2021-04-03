@@ -13,7 +13,7 @@ import SwiftyJSON
 struct AuthService {
 
     func logIn(end: Endpoint, params: Body, completion: @escaping (Profile?) -> Void) {
-        let stringURL = NetworkService.baseUrl + "api/v1/users/" + end.rawValue
+        let stringURL = Api.baseUrl + "users/" + end.rawValue
         let url = URL(string: stringURL)
 
         var request = URLRequest(url: url!)

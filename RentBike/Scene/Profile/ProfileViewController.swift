@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
     }
     struct Output {
         var logout: () -> Void
-        var getAvatar: (_ completion: @escaping (String?) -> Void) -> Void
+        var getAvatar: (_ completion: @escaping (Profile?) -> Void) -> Void
         var upload: (UIImage?) -> Void
         //var infoOpen: () -> Void
     }
@@ -42,19 +42,15 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.nameLabel.text = Profile.current?.username
-        self.aboutLabel.text = Profile.current?.about
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        output.getAvatar { [weak self] url in
-            guard let url = url, let self = self else { return }
+        output.getAvatar { [weak self] profile in
+            guard let url = profile?.avatar, let self = self else { return }
 
             self.imageView.setImageWithSD(from: url)
-            self.nameLabel.text = Profile.current?.username
-            self.aboutLabel.text = Profile.current?.about
         }
     }
 

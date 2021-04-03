@@ -38,14 +38,10 @@ class ProfileFlow {
     }
 
     func uploadImage(_ image: UIImage?) {
-        service.upload(image: image, completion: { result in
 
-        }) { count in
-            print(count)
-        }
     }
 
-    func getProfile(complition: @escaping (String?) -> Void) {
+    func getProfile(complition: @escaping (Profile?) -> Void) {
         service.getProfile(complition: complition)
     }
 

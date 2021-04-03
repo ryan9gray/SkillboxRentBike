@@ -15,55 +15,79 @@ class NetworkService {
 
 	static let shared = NetworkService()
 
-	static let baseUrl = "http://85.119.146.20:3000/"
 
-    func getProfile(complition: @escaping (String?) -> Void) {
-        guard let id = Profile.current?.profileId else { return }
+    func getProfile(complition: @escaping (Profile?) -> Void) {
+        guard let token = Profile.current?.token
+        else { return }
 
-        AF.request(NetworkService.baseUrl + "api/v1/profile/\(id)").responseJSON { response in
+        AF.request(Api.profile.url, headers: ["token": token]).responseJSON { response in
             debugPrint(response)
-            guard
-                let data = response.data,
-                let avatar = JSON(data)["info"]["avatar"].string
+            guard let data = response.data
             else { return complition(nil) }
 
-            Profile.current?.username = JSON(data)["info"]["username"].string ?? ""
-            Profile.current?.about = JSON(data)["info"]["about"].string ?? ""
-            Profile.current?.avatar = avatar
-            complition(avatar)
+            let json = JSON(data)["info"]
+            let profile = Mapper<Profile>().map(JSONString: json.description)
+            Profile.current = profile
+            Profile.current?.save()
         }
     }
 
     func updateProfile() {
 
     }
-
-    func upload(
-        image: UIImage?,
-        completion: @escaping (Result<Void>) -> Void,
-        onProgress: @escaping (Double) -> Void
-    ) {
-        guard let id = Profile.current?.profileId else { return }
-
-        AF.upload(
-            multipartFormData: { multipartFormData in
-                if let jpegData = image?.resizeWith()?.jpegData(compressionQuality: 1.0) {
-                    multipartFormData.append(Data(jpegData), withName: "avatar", fileName: "form-data", mimeType: "image/png")
-                }
-            },
-            to: NetworkService.baseUrl + "api/v1/profile/\(id)",
-            method: .post,
-            requestModifier: { request in
-                let body = try? JSONEncoder().encode(ProfileResponse(username: "r9g", about: "U know who i am"))
-                request.httpBody = body
-            }
-        ).responseJSON { response in
-            debugPrint(response)
+    func update(completion: @escaping (String?) -> Void) {
+        guard let profile = Profile.current else {
+            return completion(nil)
         }
+        let stringURL = Api.profile.url
+        let url = URL(string: stringURL)
+
+        var request = URLRequest(url: url!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let body = try? JSONEncoder().encode(profile.update)
+        request.httpBody = body
+
+        AF.request(request)
+            .responseJSON { response in
+                print(response)
+                switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)["info"]
+                        let profile = Mapper<Profile>().map(JSONString: json.description)
+                        Profile.current = profile
+                        Profile.current?.save()
+                        //completion(profile)
+                    case .failure(let error):
+                        print(error)
+                        completion(nil)
+                }
+
+            }
     }
 
     struct ProfileResponse: Codable {
         let username: String?
         let about: String?
+    }
+}
+enum Api: String {
+    static let baseUrl = "http://77.223.116.18:3000/api/v1/"
+
+    case auth = "users/login"
+    case rides = "rides"
+    case bikes = "bikes"
+    case profile = "profile"
+	case startRide = "ride/start"
+    case finishRide = "ride/finish"
+    case move = "ride/move"
+    case startBook = "book/start"
+    case finishBook = "book/finish"
+    case wallet = "wallet"
+
+
+    var url: String {
+        return Api.baseUrl + self.rawValue
     }
 }

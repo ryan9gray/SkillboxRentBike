@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		250ECD3E25F4E144006EA881 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD3D25F4E144006EA881 /* Bike.swift */; };
+		250ECD3E25F4E144006EA881 /* BikeAnnotataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD3D25F4E144006EA881 /* BikeAnnotataion.swift */; };
 		250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD4525F4E2D2006EA881 /* BikeView.swift */; };
 		250ECD4B25F4E404006EA881 /* Bikes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 250ECD4A25F4E404006EA881 /* Bikes.geojson */; };
 		250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECD5825F4F632006EA881 /* RoundButton.swift */; };
 		250ECDA625F51C0C006EA881 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250ECDA525F51C0C006EA881 /* LayoutHelper.swift */; };
 		251B84FF260E32A70019B54B /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B84FE260E32A70019B54B /* Wallet.swift */; };
-		251B8504260E366E0019B54B /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B8503260E366E0019B54B /* Ride.swift */; };
+		251B8504260E366E0019B54B /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B8503260E366E0019B54B /* Bike.swift */; };
 		251B850C260E38D60019B54B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251B850B260E38D60019B54B /* Profile.storyboard */; };
 		251B8511260E39250019B54B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251B8510260E39250019B54B /* Auth.storyboard */; };
 		25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25203C0525EA5F14000BE950 /* AppDelegate.swift */; };
@@ -98,6 +98,7 @@
 		257AE852260E3F1200660A1A /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE851260E3F1200660A1A /* WalletViewController.swift */; };
 		257AE857260E3F5D00660A1A /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE856260E3F5D00660A1A /* PromoViewController.swift */; };
 		257AE864260E422D00660A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 257AE866260E422D00660A1A /* Localizable.strings */; };
+		25B8B7D5261776D400A65CB3 /* RideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B8B7D4261776D400A65CB3 /* RideService.swift */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,14 +120,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		250ECD3D25F4E144006EA881 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
+		250ECD3D25F4E144006EA881 /* BikeAnnotataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeAnnotataion.swift; sourceTree = "<group>"; };
 		250ECD4525F4E2D2006EA881 /* BikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeView.swift; sourceTree = "<group>"; };
 		250ECD4A25F4E404006EA881 /* Bikes.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bikes.geojson; sourceTree = "<group>"; };
 		250ECD5825F4F632006EA881 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		250ECD6025F500A0006EA881 /* LocationMock.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationMock.gpx; sourceTree = "<group>"; };
 		250ECDA525F51C0C006EA881 /* LayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		251B84FE260E32A70019B54B /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
-		251B8503260E366E0019B54B /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		251B8503260E366E0019B54B /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		251B850B260E38D60019B54B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		251B8510260E39250019B54B /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		25203C0225EA5F14000BE950 /* RentBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RentBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +219,7 @@
 		257AE856260E3F5D00660A1A /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		257AE865260E422D00660A1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		257AE86A260E42A700660A1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		25B8B7D4261776D400A65CB3 /* RideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideService.swift; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
 		AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RentBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,8 +356,10 @@
 			isa = PBXGroup;
 			children = (
 				25312492260F5C7C00C163E2 /* MenuService.swift */,
+				25B8B7D4261776D400A65CB3 /* RideService.swift */,
 				25203CC725EA655F000BE950 /* Result.swift */,
 				252BD38C260CDB3D009B2EAF /* SocketService.swift */,
+				25203C9325EA62B2000BE950 /* AuthService.swift */,
 				25203C8C25EA62B2000BE950 /* NetworkService.swift */,
 				256E33592608ACA2000C679F /* LocationTracker.swift */,
 			);
@@ -379,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				25203C9225EA62B2000BE950 /* AuthViewController.swift */,
-				25203C9325EA62B2000BE950 /* AuthService.swift */,
 				25203C9425EA62B2000BE950 /* AuthFlow.swift */,
 			);
 			path = Auth;
@@ -415,9 +418,9 @@
 			isa = PBXGroup;
 			children = (
 				25203CB025EA62EF000BE950 /* Profile.swift */,
-				251B8503260E366E0019B54B /* Ride.swift */,
+				251B8503260E366E0019B54B /* Bike.swift */,
 				251B84FE260E32A70019B54B /* Wallet.swift */,
-				250ECD3D25F4E144006EA881 /* Bike.swift */,
+				250ECD3D25F4E144006EA881 /* BikeAnnotataion.swift */,
 				250ECD4525F4E2D2006EA881 /* BikeView.swift */,
 			);
 			path = Models;
@@ -778,6 +781,7 @@
 				256E334B2608A9EB000C679F /* MenuModels.swift in Sources */,
 				256E334D2608A9EB000C679F /* MenuInteractor.swift in Sources */,
 				25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */,
+				25B8B7D5261776D400A65CB3 /* RideService.swift in Sources */,
 				25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */,
 				256E33552608AA94000C679F /* RootViewController.swift in Sources */,
 				256E33492608A9EB000C679F /* MenuWorker.swift in Sources */,
@@ -788,7 +792,7 @@
 				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
 				256E33482608A9EB000C679F /* MenuPresenter.swift in Sources */,
 				25203C0625EA5F14000BE950 /* AppDelegate.swift in Sources */,
-				251B8504260E366E0019B54B /* Ride.swift in Sources */,
+				251B8504260E366E0019B54B /* Bike.swift in Sources */,
 				25203CC025EA6503000BE950 /* LocationCacher.swift in Sources */,
 				25203CA125EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				25203CE425EA8EE2000BE950 /* MapViewController.swift in Sources */,
@@ -800,7 +804,7 @@
 				250ECDA625F51C0C006EA881 /* LayoutHelper.swift in Sources */,
 				25203C7C25EA6262000BE950 /* Int.swift in Sources */,
 				256E333D2608A9AA000C679F /* DrawerController.swift in Sources */,
-				250ECD3E25F4E144006EA881 /* Bike.swift in Sources */,
+				250ECD3E25F4E144006EA881 /* BikeAnnotataion.swift in Sources */,
 				25203CC125EA6503000BE950 /* LogsCacher.swift in Sources */,
 				25203CBD25EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 			);
