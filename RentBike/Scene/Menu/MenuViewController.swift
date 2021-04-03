@@ -73,9 +73,24 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
+        if let profile = Profile.current {
+            updateLabels(profile: profile)
+        }
+        interactor?.getProfile(complition: { [weak self] profile in
+            guard let self = self, let profile = profile else { return }
+
+            self.updateLabels(profile: profile)
+        })
     }
 
-    // MARK: Actions
+    func updateLabels(profile: Profile) {
+        avatarImageView.setImageWithSD(from: profile.avatar)
+        walletLabel.text = "Кошелек \(profile.balance)"
+        calLabel.text = "Калории \(profile.calories)"
+        distansLabel.text = "Пробег \(profile.distance)"
+        ridesLabel.text = "Поездки \(profile.rides.count)"
+    }
 
 }

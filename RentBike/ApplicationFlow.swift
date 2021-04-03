@@ -18,12 +18,11 @@ class ApplicationFlow {
     func start() {
         mapFlow.start()
         
-		startMain()
-//		if Profile.isAuthorized {
-//			startMain()
-//		} else {
-//			ViewHierarchyWorker.resetAppForAuthentication()
-//		}
+		if Profile.isAuthorized {
+			startMain()
+		} else {
+			ViewHierarchyWorker.resetAppForAuthentication()
+		}
 	}
 
 	func startMain() {

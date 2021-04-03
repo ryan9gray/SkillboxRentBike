@@ -13,7 +13,7 @@
 import UIKit
 
 protocol MenuBusinessLogic {
-    
+    func getProfile(complition: @escaping (Profile?) -> Void)
 }
 
 protocol MenuDataStore {
@@ -23,6 +23,8 @@ protocol MenuDataStore {
 class MenuInteractor: MenuBusinessLogic, MenuDataStore {
     var presenter: MenuPresentationLogic?    
 
-    // MARK: Do something
+    func getProfile(complition: @escaping (Profile?) -> Void) {
+        NetworkService.shared.getProfile(complition: complition)
+    }
 
 }
