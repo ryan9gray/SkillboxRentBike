@@ -78,4 +78,16 @@ extension Date {
         outputFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         return outputFormatter.string(from: self)
     }
+    var longDate: String {
+        let outputFormatter = DateFormatter()
+        outputFormatter.timeZone = TimeZone.current
+        outputFormatter.dateFormat = "dd.MM.yyyy"
+        return outputFormatter.string(from: self)
+    }
+    var hours: String {
+        let outputFormatter = DateFormatter()
+        outputFormatter.timeZone = TimeZone.current
+        outputFormatter.dateFormat = "HH:mm"
+        return outputFormatter.string(from: self)
+    }
 }

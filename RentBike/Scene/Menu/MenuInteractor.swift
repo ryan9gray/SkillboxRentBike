@@ -11,9 +11,12 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 protocol MenuBusinessLogic {
     func getProfile(complition: @escaping (Profile?) -> Void)
+    func logout()
 }
 
 protocol MenuDataStore {
@@ -27,4 +30,15 @@ class MenuInteractor: MenuBusinessLogic, MenuDataStore {
         NetworkService.shared.getProfile(complition: complition)
     }
 
+    func logout() {
+        Profile.current = nil
+        AppCacher.mappable.removeValue(of: Profile.self)
+        ViewHierarchyWorker.resetAppForAuthentication()
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
 }

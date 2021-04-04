@@ -17,25 +17,23 @@ class NetworkService {
 
 
     func getProfile(complition: @escaping (Profile?) -> Void) {
-        guard let token = Profile.current?.token
-        else { return }
-
-        AF.request(Api.profile.url, headers: ["token": token]).responseJSON { response in
+        AF.request(Api.profile.url, headers: ["token": Profile.tokenOrEmpty]).responseJSON { response in
             debugPrint(response)
             guard let data = response.data
             else { return complition(nil) }
 
             let json = JSON(data)["info"]
-            let profile = Mapper<Profile>().map(JSONString: json.description)
-            Profile.current = profile
-            Profile.current?.save()
+            if let profile = Mapper<Profile>().map(JSONString: json.description) {
+                Profile.current = profile
+                Profile.current?.save()
+            }
         }
     }
 
     func updateProfile() {
 
     }
-    func update(completion: @escaping (String?) -> Void) {
+    func update(completion: @escaping (Profile?) -> Void) {
         guard let profile = Profile.current else {
             return completion(nil)
         }
@@ -45,6 +43,7 @@ class NetworkService {
         var request = URLRequest(url: url!)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(Profile.tokenOrEmpty, forHTTPHeaderField: "token")
 
         let body = try? JSONEncoder().encode(profile.update)
         request.httpBody = body
@@ -58,7 +57,7 @@ class NetworkService {
                         let profile = Mapper<Profile>().map(JSONString: json.description)
                         Profile.current = profile
                         Profile.current?.save()
-                        //completion(profile)
+                        completion(profile)
                     case .failure(let error):
                         print(error)
                         completion(nil)
@@ -67,10 +66,35 @@ class NetworkService {
             }
     }
 
-    struct ProfileResponse: Codable {
-        let username: String?
-        let about: String?
+    func move(coordinate: Cordinate) {
+        let stringURL = Api.profile.url
+        let url = URL(string: stringURL)
+
+        var request = URLRequest(url: url!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(Profile.tokenOrEmpty, forHTTPHeaderField: "token")
+
+        let body = try? JSONEncoder().encode(coordinate)
+        request.httpBody = body
+
+        AF.request(request)
+            .responseJSON { response in
+                print(response)
+                switch response.result {
+                    case .success:
+                        break
+                    case .failure(let error):
+                        print(error)
+                }
+            }
     }
+
+    struct Cordinate: Codable {
+        let latitude: Double
+        let longitude: Double
+    }
+
 }
 enum Api: String {
     static let baseUrl = "http://77.223.116.18:3000/api/v1/"

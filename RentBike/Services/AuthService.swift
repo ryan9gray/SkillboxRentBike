@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct AuthService {
 
-    func logIn(end: Endpoint, params: Body, completion: @escaping (Profile?) -> Void) {
+    func logIn(end: Endpoint, params: Body, completion: @escaping (String?) -> Void) {
         let stringURL = Api.baseUrl + "users/" + end.rawValue
         let url = URL(string: stringURL)
 
@@ -20,7 +20,7 @@ struct AuthService {
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let body = try? JSONEncoder().encode(params)//JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        let body = try? JSONEncoder().encode(params)
         request.httpBody = body
 
         AF.request(request)
@@ -28,11 +28,10 @@ struct AuthService {
                 print(response)
                 switch response.result {
                     case .success(let data):
-                        let json = JSON(data)["info"]
-                        let profile = Mapper<Profile>().map(JSONString: json.description)
-                        Profile.current = profile
-                        Profile.current?.save()
-                        completion(profile)
+                        if let token = JSON(data)["info"]["token"].string {
+                            LocalStore.token = token
+                            completion(token)
+                        }
                     case .failure(let error):
                         print(error)
                         completion(nil)

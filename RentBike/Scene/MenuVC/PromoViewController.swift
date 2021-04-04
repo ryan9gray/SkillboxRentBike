@@ -16,15 +16,13 @@ class PromoViewController: UIViewController {
     @IBAction func doneTap(_ sender: Any) {
         errorLabel.text = ""
         guard let text = promoTextField.text else { return }
-        if output.promocode(text) {
-			
-        } else {
-            errorLabel.text = "Таково промокода не существует"
-        }
+        output.promocode(text, { [weak self] bool in
+            self?.errorLabel.text = bool ? "" : "Таково промокода не существует"
+        })
     }
 
     struct Output {
-        var promocode: (String) -> Bool
+        var promocode: ((String, _ completion: @escaping (Bool) -> Void) -> ())
     }
     var output: Output!
 

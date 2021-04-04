@@ -63,8 +63,6 @@ class AuthViewController: UIViewController {
         loginTextfield.delegate = self
         passwordTextfield.delegate = self
         setuoGoogle()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
         setLinks()
         registrateBUtton.setTitle("registrate".localized, for: .normal)
         loginButton.setTitle("log_in".localized, for: .normal)
@@ -75,6 +73,8 @@ class AuthViewController: UIViewController {
     // MARK: Actions
     func setuoGoogle() {
         GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
     }
     private let ulegalSet = CharacterSet(charactersIn: "^|?\"")
 

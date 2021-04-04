@@ -33,7 +33,7 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
         router?.openWallet()
     }
     @IBAction func logoutTap(_ sender: Any) {
-
+        interactor?.logout()
     }
     @IBAction func promoCodeTap(_ sender: Any) {
         router?.openPromo()
@@ -75,6 +75,12 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
         super.viewDidLoad()
 
         
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         if let profile = Profile.current {
             updateLabels(profile: profile)
         }

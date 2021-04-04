@@ -20,7 +20,7 @@ final class Profile: Mappable  {
 	}
 
     static var tokenOrEmpty: String {
-        return current?.token ?? ""
+        return LocalStore.token
     }
 
 	var id: String = ""
@@ -29,7 +29,6 @@ final class Profile: Mappable  {
     var distance: Int = 0
     var calories: Int = 0
     var rides: [Ride] = []
-    var token: String = ""
     var latitude: Double?
     var longitude: Double?
     var lastBike: Bike?
@@ -42,14 +41,13 @@ final class Profile: Mappable  {
     }
 
     var update: ProfileUpdate {
-        return .init(calories: calories, balance: balance, distance: distance, avatar: avatar, latitude: longitude, longitude: longitude)
+        return .init(calories: calories, balance: balance, distance: distance, avatar: avatar, latitude: latitude, longitude: longitude)
     }
 
 	required init?(map: Map) { }
 
 	func mapping(map: Map) {
 		id <- map["id"]
-        token <- map["token"]
         avatar <- map["avatar"]
         balance <- map["balance"]
         distance <- map["distance"]

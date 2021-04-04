@@ -10,7 +10,14 @@ import ObjectMapper
 class Bike: Mappable {
     var lightOn: Bool = false
     var isUnlock = false
-
+    var latitude: Double = 0
+    var longitude: Double = 0
+    var rideId: Int?
+    var id: Int = 0
+    
+    var inProgress: Bool {
+        return status != .free
+    }
     var status: Status = .free
 
     enum Status: Int {
@@ -26,7 +33,11 @@ class Bike: Mappable {
     func mapping(map: Map) {
         status <- (map["status"], EnumTransform<Status>())
         lightOn <- map["lightOn"]
-        isUnlock <- map["isLock"]
+        isUnlock <- map["isUnlock"]
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
+        rideId <- map["rideId"]
+        id <- map["id"]
     }
 }
 

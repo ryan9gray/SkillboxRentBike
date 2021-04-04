@@ -26,7 +26,6 @@ class ProfileFlow {
     private func createInitialViewController() -> UIViewController {
         let controller = ProfileViewController.instantiate(fromStoryboard: .profile)
         controller.output = .init(
-            logout: logout,
             getAvatar: getProfile,
             upload: uploadImage
             //            infoOpen: { [weak controller] in
@@ -43,18 +42,6 @@ class ProfileFlow {
 
     func getProfile(complition: @escaping (Profile?) -> Void) {
         service.getProfile(complition: complition)
-    }
-
-    func logout() {
-        Profile.current = nil
-        AppCacher.mappable.removeValue(of: Profile.self)
-        ViewHierarchyWorker.resetAppForAuthentication()
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
     }
 
     func openInfo(from: UIViewController?) {

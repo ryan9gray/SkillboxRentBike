@@ -16,9 +16,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var aboutLabel: UILabel!
 
-    @IBAction func logOutTap(_ sender: Any) {
-        output.logout()
-    }
     @IBAction func editAvatarTap(_ sender: Any) {
         libOpen()
     }
@@ -26,7 +23,6 @@ class ProfileViewController: UIViewController {
         сamOpen()
     }
     struct Output {
-        var logout: () -> Void
         var getAvatar: (_ completion: @escaping (Profile?) -> Void) -> Void
         var upload: (UIImage?) -> Void
         //var infoOpen: () -> Void

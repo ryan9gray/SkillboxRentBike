@@ -17,6 +17,9 @@ struct LocalStore {
 
     @Storage(userDefaults: userDefaults, key: "safeDistance", defaultValue: false)
     static var safeDistance: Bool
+
+    @Storage(userDefaults: userDefaults, key: "token", defaultValue: "")
+    static var token: String
 }
 
 @propertyWrapper

@@ -21,12 +21,12 @@ class MapViewController: UIViewController {
     private var bikes: [BikeAnnotataion] = []
     private var currentLocation: CLLocation? {
         didSet {
-            if oldValue == nil {
-                setBikes()
-            }
             guard let location = currentLocation else { return }
+            if oldValue == nil {
+                output.sendMyLocation(location)
+            }
             updateMapOverlayViews(coordinate: location.coordinate)
-            if input.inProgress() {
+            if input.bike()?.inProgress ?? false {
                 output.moved(location)
             }
         }
@@ -45,17 +45,21 @@ class MapViewController: UIViewController {
         var moved: (CLLocation) -> Void
         var lock: (_ completion: @escaping (Bool) -> Void) -> Void
         var light: (_ completion: @escaping (Bool) -> Void) -> Void
+        var sendMyLocation: (CLLocation) -> (Void)
     }
+
     struct Input {
-        var inProgress: () -> Bool
+        var bike: () -> Bike?
         var load: (_ completion: @escaping ([BikeAnnotataion]) -> Void) -> Void
     }
+    
     var input: Input!
     var output: Output!
 
     @IBAction func locationTap(_ sender: Any) {
         guard let location = currentLocation else { return }
         mapView.centerToLocation(location)
+        output.sendMyLocation(location)
     }
 
     @IBAction func finishTap(_ sender: Any) {
@@ -65,14 +69,14 @@ class MapViewController: UIViewController {
     @IBAction func lightTap(_ sender: Any) {
         lightButton.isSelected.toggle()
         output.light { bool in
-            self.lightButton.isSelected = bool
+            self.lightButton.isSelected = !bool
         }
     }
 
     @IBAction func lockTap(_ sender: Any) {
         lockButton.isSelected.toggle()
         output.lock { bool in
-            self.lockButton.isSelected = bool
+            self.lockButton.isSelected = !bool
         }
     }
 
@@ -85,12 +89,18 @@ class MapViewController: UIViewController {
         LocationTracker.shared.authorizeLocationTracking()
     }
 
-    func setBikes() {
-        input.load { [weak self] bikes in
-            guard let self = self else { return }
-            self.bikes.append(contentsOf: bikes)
-            self.mapView.addAnnotations(self.bikes)
-        }
+    func setBike(_ bike: Bike) {
+        guard bikes.isEmpty else { return }
+
+        let anotaion = BikeAnnotataion(
+            title: "BMW",
+            locationName: nil,
+            discipline: nil,
+            coordinate: .init(latitude: bike.latitude, longitude: bike.longitude)
+        )
+        self.bikes.append(anotaion)
+        self.mapView.addAnnotations(self.bikes)
+        updateButtons()
     }
 
     func setButtons() {
@@ -100,16 +110,15 @@ class MapViewController: UIViewController {
     }
 
     func toRent() {
-        guard let bike = selectedBike else { return }
-        guard let dist = currentLocation?.distance(
-            from: CLLocation(latitude: bike.coordinate.latitude, longitude: bike.coordinate.longitude)
-        ) else { return }
-        if dist > BikeProfile.maxDistanse {
-			showInvalidDistanceAlert()
-        } else {
-            output.start(bike)
-            finishButton.isSelected = true
-        }
+        guard let anotation = selectedBike else { return }
+        output.start(anotation)
+    }
+
+    func updateButtons() {
+        guard let bike = input.bike() else { return }
+        lightButton.isSelected = bike.lightOn
+        lockButton.isSelected = bike.isUnlock
+        finishButton.isSelected = bike.inProgress
     }
 
     private func setupMap() {
@@ -125,7 +134,7 @@ class MapViewController: UIViewController {
     func updateMapOverlayViews(coordinate: CLLocationCoordinate2D) {
         mapView.removeOverlays(mapView.overlays)
         if let bike = selectedBike,
-           input.inProgress(),
+           input.bike()?.inProgress ?? false,
            let location = currentLocation
         {
             mapView.removeAnnotation(bike)
@@ -143,9 +152,9 @@ class MapViewController: UIViewController {
         mapView.addOverlay(circleOverlay)
     }
 
-    private func showInvalidDistanceAlert() {
+    func showInvalidDistanceAlert() {
         let alert = UIAlertController(
-            title: nil,
+            title: "Booked",
             message: "Please enter a valid distance in kilometers",
             preferredStyle: .alert
         )
