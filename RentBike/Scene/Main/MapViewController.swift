@@ -25,12 +25,29 @@ class MapViewController: UIViewController {
             if oldValue == nil {
                 output.sendMyLocation(location)
             }
-            updateMapOverlayViews(coordinate: location.coordinate)
-            if input.bike()?.inProgress ?? false {
-                output.moved(location)
-            }
+			locationDidUpdated(location)
         }
     }
+
+    func locationDidUpdated(_ location: CLLocation) {
+        updateMapOverlayViews(coordinate: location.coordinate)
+        if input.bike()?.status == .some(.inProgress) {
+            output.moved(location)
+        }
+
+        guard let bike = input.bike() else { return }
+        switch bike.status {
+            case .inProgress:
+                output.moved(location)
+            case .booked:
+                if location.distance(from: bike.coordinate) < BikeProfile.maxDistanse {
+                    output.start(selectedBike!)
+                }
+            default:
+                break
+        }
+    }
+
     private var selectedBike: BikeAnnotataion? {
         didSet {
             if oldValue == nil {
@@ -134,7 +151,7 @@ class MapViewController: UIViewController {
     func updateMapOverlayViews(coordinate: CLLocationCoordinate2D) {
         mapView.removeOverlays(mapView.overlays)
         if let bike = selectedBike,
-           input.bike()?.inProgress ?? false,
+           input.bike()?.status == .some(.inProgress),
            let location = currentLocation
         {
             mapView.removeAnnotation(bike)

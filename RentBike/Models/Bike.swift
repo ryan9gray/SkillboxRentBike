@@ -6,6 +6,7 @@
 //
 
 import ObjectMapper
+import CoreLocation
 
 class Bike: Mappable {
     var lightOn: Bool = false
@@ -25,7 +26,11 @@ class Bike: Mappable {
         case booked = 1
         case inProgress = 2
     }
-    
+
+    var coordinate: CLLocation {
+        return .init(latitude: latitude, longitude: longitude)
+    }
+
     init() { }
 
     required init?(map: Map) {}

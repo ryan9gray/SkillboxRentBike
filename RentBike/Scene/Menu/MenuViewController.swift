@@ -74,16 +74,24 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(profileDidChanged),
+            name: NSNotification.Name.ProfileDidChanged,
+            object: nil
+        )
+        profileDidChanged()
         
-
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
+    @objc func profileDidChanged() {
         if let profile = Profile.current {
             updateLabels(profile: profile)
         }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         interactor?.getProfile(complition: { [weak self] profile in
             guard let self = self, let profile = profile else { return }
 

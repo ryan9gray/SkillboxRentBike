@@ -11,12 +11,11 @@ import MapKit
 class MapFlow {
     let rootVC: RootViewController = RootViewController.init(nibName: nil, bundle: nil)
     let service = NetworkService.shared
-
     let rideService = RideService()
     let controller = MapViewController.instantiate(fromStoryboard: .main)
 
-
     var bike: Bike?
+    var startAnotation: BikeAnnotataion?
 
     func start() {
         rootVC.setViewControllers([ createInitialViewController() ], animated: false)
@@ -29,7 +28,6 @@ class MapFlow {
 
     /// Утечка памяти
     private func createInitialViewController() -> UIViewController {
-
         controller.input = .init(
             bike: { self.bike },
             load: loadInitialData
@@ -45,18 +43,21 @@ class MapFlow {
         return controller
     }
 
-    func canRide(coordinate: CLLocationCoordinate2D) -> Bool {
+    func distanse(coordinate: CLLocationCoordinate2D) -> CLLocationDistance? {
         guard let dist = LocationTracker.shared.locationManager.location?.distance(
             from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        ) else { return false }
-        return dist < BikeProfile.maxDistanse
+        ) else { return nil }
+        return dist
     }
 
     func startRide(annotation: BikeAnnotataion) {
         guard let bike = bike else { return }
-
-        if !canRide(coordinate: annotation.coordinate) {
+        guard let dist = distanse(coordinate: annotation.coordinate) else {
+            return
+        }
+        if dist > BikeProfile.maxDistanse {
             if bike.status == .booked {
+                bike.status = .free
                 rideService.book(id: bike.id, start: false)
             } else {
             	rideService.book(id: bike.id, start: true)
@@ -66,13 +67,17 @@ class MapFlow {
         } else {
             switch bike.status {
                 case .booked, .free:
+                    bike.status = .inProgress
+                    startAnotation = annotation
                     rideService.rideStart(id: bike.id)
                 case .inProgress:
-                    break
-
+                    let anot = startAnotation?.coordinate ?? annotation.coordinate
+                    bike.status = .free
+                    rideService.rideFinish(.init(bikeId: bike.id, distance: Int(distanse(coordinate: anot)!)))
+                    Profile.current?.lastBike = bike
             }
         }
-        //rideService.
+        controller.updateButtons()
     }
 
     func light(_ completion: @escaping (Bool) -> Void) {
@@ -93,8 +98,8 @@ class MapFlow {
 
     func updateBike(completion: @escaping (Bike?) -> Void) {
         guard let bike = bike else { return }
-        bike.lightOn.toggle()
         rideService.bikeChange(.init(lightOn: bike.lightOn, isUnlock: bike.isUnlock), id: bike.id, completion: completion)
+        controller.updateButtons()
     }
 
     func moved(coordinate: CLLocation) {
