@@ -86,14 +86,14 @@ class MapViewController: UIViewController {
     @IBAction func lightTap(_ sender: Any) {
         lightButton.isSelected.toggle()
         output.light { bool in
-            self.lightButton.isSelected = !bool
+            self.updateButtons()
         }
     }
 
     @IBAction func lockTap(_ sender: Any) {
         lockButton.isSelected.toggle()
         output.lock { bool in
-            self.lockButton.isSelected = !bool
+            self.updateButtons()
         }
     }
 
@@ -121,9 +121,7 @@ class MapViewController: UIViewController {
     }
 
     func setButtons() {
-        guard let bike = selectedBike else { return }
-
-        actButtons.forEach { $0.isHidden = false }
+        finishButton.isHidden = selectedBike == nil
     }
 
     func toRent() {
@@ -136,6 +134,8 @@ class MapViewController: UIViewController {
         lightButton.isSelected = bike.lightOn
         lockButton.isSelected = bike.isUnlock
         finishButton.isSelected = bike.inProgress
+        lightButton.isHidden = !bike.inProgress
+        lockButton.isHidden = !bike.inProgress
     }
 
     private func setupMap() {

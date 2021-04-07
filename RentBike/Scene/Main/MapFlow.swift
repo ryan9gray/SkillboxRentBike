@@ -88,6 +88,7 @@ class MapFlow {
         bike?.lightOn.toggle()
         updateBike(completion: { bike in
             guard let bike = bike else { return }
+            self.bike = bike
             completion(bike.lightOn)
         })
     }

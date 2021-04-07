@@ -11,8 +11,8 @@ import UIKit
 class NotificationService {
 
     static let shared = NotificationService()
-    private var timer = Timer()
-    private let limit: CGFloat = 10.0
+    private var timer: Timer? = Timer()
+    private let limit: CGFloat =  30.0
 
     func scheduleNotification(notificationType: String) {
 
@@ -32,7 +32,8 @@ class NotificationService {
     }
 
     func stopTimer() {
-        timer.invalidate()
+        timer?.invalidate()
+        timer = nil
     }
 
     func sendPush() {
