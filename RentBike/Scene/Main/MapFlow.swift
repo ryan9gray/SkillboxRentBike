@@ -67,10 +67,14 @@ class MapFlow {
         } else {
             switch bike.status {
                 case .booked, .free:
+                    NotificationService.shared.startTimer()
                     bike.status = .inProgress
                     startAnotation = annotation
                     rideService.rideStart(id: bike.id)
                 case .inProgress:
+                    if !bike.lightOn {
+                        NotificationService.shared.stopTimer()
+                    }
                     let anot = startAnotation?.coordinate ?? annotation.coordinate
                     bike.status = .free
                     rideService.rideFinish(.init(bikeId: bike.id, distance: Int(distanse(coordinate: anot)!)))

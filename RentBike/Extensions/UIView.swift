@@ -57,3 +57,12 @@ public extension UIView {
         return systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
     }
 }
+extension Optional {
+    @discardableResult
+    func with(_ action: (Wrapped) throws -> Void) rethrows -> Optional {
+        if let value = self {
+            try action(value)
+        }
+        return self
+    }
+}

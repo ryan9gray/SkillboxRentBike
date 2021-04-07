@@ -11,6 +11,7 @@ class ApplicationFlow {
     static let shared = ApplicationFlow()
 
 	private init() { }
+    let alertPresenter: AlertPresenter = WindowAlertPresenter()
 
     let profileFlow = ProfileFlow()
     let mapFlow = MapFlow()

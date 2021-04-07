@@ -4,6 +4,8 @@ import UIKit
 enum Style {
     enum Color {
         static let black            = UIColor.black
+        static let hint            = UIColor(hex: "f8f9fa")
+        static let mystic            = UIColor(hex: "e1e7ec")
 
         // Blue
         static let regal      = UIColor(hex: "203d54")
@@ -13,6 +15,10 @@ enum Style {
         static let picton      = UIColor(hex: "63a2d8")
         static let pale      = UIColor(hex: "aad4f5")
         static let alice      = UIColor(hex: "eff8ff")
+
+        //Red
+        static let red      = UIColor(hex: "dc3030")
+
 
 		// Gray
         static let nevada           = UIColor(hex: "5f6b7a")
@@ -48,7 +54,10 @@ enum Style {
                 return UIColor.white
             }
         }
-
+        static let whiteSubhedline: [NSAttributedString.Key: Any] = [
+            .font: Style.Font.main(size: 15),
+            .foregroundColor: UIColor.white
+        ]
         static let subheadSemibold: [NSAttributedString.Key: Any] = [
             .font: Style.Font.semibold(size: 14),
             .foregroundColor: Style.Color.black
@@ -84,7 +93,9 @@ enum Style {
             ]
         }
     }
-
+    enum Margins {
+        static let `default`: CGFloat = 15
+    }
 }
 
 protocol Applicable {

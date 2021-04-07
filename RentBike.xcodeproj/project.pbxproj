@@ -99,6 +99,15 @@
 		257AE852260E3F1200660A1A /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE851260E3F1200660A1A /* WalletViewController.swift */; };
 		257AE857260E3F5D00660A1A /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AE856260E3F5D00660A1A /* PromoViewController.swift */; };
 		257AE864260E422D00660A1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 257AE866260E422D00660A1A /* Localizable.strings */; };
+		25A991C0261CDB4900F2087C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991BF261CDB4900F2087C /* NotificationService.swift */; };
+		25A991CC261DDD5500F2087C /* AnonNotificationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991C5261DDD5500F2087C /* AnonNotificationAlert.swift */; };
+		25A991CD261DDD5500F2087C /* PushNotificationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991C6261DDD5500F2087C /* PushNotificationAlert.swift */; };
+		25A991CE261DDD5500F2087C /* NotificationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991C7261DDD5500F2087C /* NotificationAlert.swift */; };
+		25A991CF261DDD5500F2087C /* SystemSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991C8261DDD5500F2087C /* SystemSoundPlayer.swift */; };
+		25A991D0261DDD5500F2087C /* BasicNotificationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991C9261DDD5500F2087C /* BasicNotificationAlert.swift */; };
+		25A991D1261DDD5500F2087C /* ErrorNotificationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991CA261DDD5500F2087C /* ErrorNotificationAlert.swift */; };
+		25A991D2261DDD5500F2087C /* WindowAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991CB261DDD5500F2087C /* WindowAlertPresenter.swift */; };
+		25A991D7261DDE3000F2087C /* HairLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991D6261DDE3000F2087C /* HairLineView.swift */; };
 		25B8B7D5261776D400A65CB3 /* RideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B8B7D4261776D400A65CB3 /* RideService.swift */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
@@ -221,6 +230,15 @@
 		257AE856260E3F5D00660A1A /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		257AE865260E422D00660A1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		257AE86A260E42A700660A1A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		25A991BF261CDB4900F2087C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		25A991C5261DDD5500F2087C /* AnonNotificationAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnonNotificationAlert.swift; sourceTree = "<group>"; };
+		25A991C6261DDD5500F2087C /* PushNotificationAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationAlert.swift; sourceTree = "<group>"; };
+		25A991C7261DDD5500F2087C /* NotificationAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationAlert.swift; sourceTree = "<group>"; };
+		25A991C8261DDD5500F2087C /* SystemSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemSoundPlayer.swift; sourceTree = "<group>"; };
+		25A991C9261DDD5500F2087C /* BasicNotificationAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNotificationAlert.swift; sourceTree = "<group>"; };
+		25A991CA261DDD5500F2087C /* ErrorNotificationAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNotificationAlert.swift; sourceTree = "<group>"; };
+		25A991CB261DDD5500F2087C /* WindowAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowAlertPresenter.swift; sourceTree = "<group>"; };
+		25A991D6261DDE3000F2087C /* HairLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HairLineView.swift; sourceTree = "<group>"; };
 		25B8B7D4261776D400A65CB3 /* RideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideService.swift; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
@@ -362,6 +380,7 @@
 				25B8B7D4261776D400A65CB3 /* RideService.swift */,
 				25203CC725EA655F000BE950 /* Result.swift */,
 				252BD38C260CDB3D009B2EAF /* SocketService.swift */,
+				25A991BF261CDB4900F2087C /* NotificationService.swift */,
 				25203C9325EA62B2000BE950 /* AuthService.swift */,
 				25203C8C25EA62B2000BE950 /* NetworkService.swift */,
 				256E33592608ACA2000C679F /* LocationTracker.swift */,
@@ -372,6 +391,7 @@
 		25203C8D25EA62B2000BE950 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				25A991D6261DDE3000F2087C /* HairLineView.swift */,
 				25203C8E25EA62B2000BE950 /* SkyFloatingLabelTextField.swift */,
 				25203C8F25EA62B2000BE950 /* UITextField+fixCaretPosition.swift */,
 				25203C9025EA62B2000BE950 /* SkyFloatingLabelTextFieldWithIcon.swift */,
@@ -394,6 +414,7 @@
 		25203C9525EA62B2000BE950 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				25A991C4261DDD5500F2087C /* Notifications */,
 				250ECDA525F51C0C006EA881 /* LayoutHelper.swift */,
 				25203C9625EA62B2000BE950 /* NetworkManager.swift */,
 				25203C9725EA62B2000BE950 /* ViewHierarchyWorker.swift */,
@@ -511,6 +532,20 @@
 				257AE856260E3F5D00660A1A /* PromoViewController.swift */,
 			);
 			path = MenuVC;
+			sourceTree = "<group>";
+		};
+		25A991C4261DDD5500F2087C /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				25A991C5261DDD5500F2087C /* AnonNotificationAlert.swift */,
+				25A991C6261DDD5500F2087C /* PushNotificationAlert.swift */,
+				25A991C7261DDD5500F2087C /* NotificationAlert.swift */,
+				25A991C8261DDD5500F2087C /* SystemSoundPlayer.swift */,
+				25A991C9261DDD5500F2087C /* BasicNotificationAlert.swift */,
+				25A991CA261DDD5500F2087C /* ErrorNotificationAlert.swift */,
+				25A991CB261DDD5500F2087C /* WindowAlertPresenter.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		828F9BB28F3F5809FE637667 /* Pods */ = {
@@ -753,6 +788,7 @@
 				25203C8525EA6262000BE950 /* UIApplication.swift in Sources */,
 				25203CB125EA62EF000BE950 /* Profile.swift in Sources */,
 				25203C7A25EA6262000BE950 /* UIView.swift in Sources */,
+				25A991CD261DDD5500F2087C /* PushNotificationAlert.swift in Sources */,
 				250ECD5925F4F632006EA881 /* RoundButton.swift in Sources */,
 				25312498260F5F0100C163E2 /* MenuFlow.swift in Sources */,
 				25203C8425EA6262000BE950 /* UIImageView+SD.swift in Sources */,
@@ -761,12 +797,15 @@
 				252BD38D260CDB3D009B2EAF /* SocketService.swift in Sources */,
 				25203CBE25EA6503000BE950 /* AppCacher.swift in Sources */,
 				25203CA825EA62B2000BE950 /* Style.swift in Sources */,
+				25A991D1261DDD5500F2087C /* ErrorNotificationAlert.swift in Sources */,
 				25203C7D25EA6262000BE950 /* UITableView.swift in Sources */,
 				25203CC825EA655F000BE950 /* Result.swift in Sources */,
 				25203CA425EA62B2000BE950 /* AuthFlow.swift in Sources */,
+				25A991CC261DDD5500F2087C /* AnonNotificationAlert.swift in Sources */,
 				25203C9F25EA62B2000BE950 /* SkyFloatingLabelTextField.swift in Sources */,
 				25203CA325EA62B2000BE950 /* AuthService.swift in Sources */,
 				25203CD725EA8DAB000BE950 /* ProfileFlow.swift in Sources */,
+				25A991CF261DDD5500F2087C /* SystemSoundPlayer.swift in Sources */,
 				25203C7F25EA6262000BE950 /* Notification.swift in Sources */,
 				25203CC325EA6503000BE950 /* SqliteCacher+MappableCacherType.swift in Sources */,
 				256E334A2608A9EB000C679F /* MenuRouter.swift in Sources */,
@@ -776,6 +815,7 @@
 				25203C8325EA6262000BE950 /* UIWindow.swift in Sources */,
 				257AE852260E3F1200660A1A /* WalletViewController.swift in Sources */,
 				25203C9D25EA62B2000BE950 /* ApplicationFlow.swift in Sources */,
+				25A991D0261DDD5500F2087C /* BasicNotificationAlert.swift in Sources */,
 				25203CAA25EA62B2000BE950 /* FormKeyboardBehavior.swift in Sources */,
 				25203C8225EA6262000BE950 /* UIViewController.swift in Sources */,
 				251B84FF260E32A70019B54B /* Wallet.swift in Sources */,
@@ -787,11 +827,13 @@
 				25203C9E25EA62B2000BE950 /* NetworkService.swift in Sources */,
 				25B8B7D5261776D400A65CB3 /* RideService.swift in Sources */,
 				25203CA225EA62B2000BE950 /* AuthViewController.swift in Sources */,
+				25A991D7261DDE3000F2087C /* HairLineView.swift in Sources */,
 				256E33552608AA94000C679F /* RootViewController.swift in Sources */,
 				256E33492608A9EB000C679F /* MenuWorker.swift in Sources */,
 				25203CA625EA62B2000BE950 /* ViewHierarchyWorker.swift in Sources */,
 				250ECD4625F4E2D2006EA881 /* BikeView.swift in Sources */,
 				25312473260F503900C163E2 /* TitleTableViewCell.swift in Sources */,
+				25A991C0261CDB4900F2087C /* NotificationService.swift in Sources */,
 				25203CA025EA62B2000BE950 /* UITextField+fixCaretPosition.swift in Sources */,
 				25203CA725EA62B2000BE950 /* LocalStore.swift in Sources */,
 				256E33482608A9EB000C679F /* MenuPresenter.swift in Sources */,
@@ -803,12 +845,14 @@
 				25203C8125EA6262000BE950 /* UIImage.swift in Sources */,
 				25203CD125EA8CC6000BE950 /* MapFlow.swift in Sources */,
 				256E334C2608A9EB000C679F /* MenuViewController.swift in Sources */,
+				25A991D2261DDD5500F2087C /* WindowAlertPresenter.swift in Sources */,
 				25203CC225EA6503000BE950 /* SqliteCacher.swift in Sources */,
 				25203C8025EA6262000BE950 /* String.swift in Sources */,
 				250ECDA625F51C0C006EA881 /* LayoutHelper.swift in Sources */,
 				25203C7C25EA6262000BE950 /* Int.swift in Sources */,
 				256E333D2608A9AA000C679F /* DrawerController.swift in Sources */,
 				250ECD3E25F4E144006EA881 /* BikeAnnotataion.swift in Sources */,
+				25A991CE261DDD5500F2087C /* NotificationAlert.swift in Sources */,
 				25203CC125EA6503000BE950 /* LogsCacher.swift in Sources */,
 				25203CBD25EA6503000BE950 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 			);
@@ -1007,7 +1051,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.rent;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.skillbox.rent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1030,7 +1074,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.rent;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.skillbox.rent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

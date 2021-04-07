@@ -33,6 +33,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             name: UIDevice.orientationDidChangeNotification,
             object: nil
         )
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+
+        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
+            if let er = error{
+                let log = "requestAuthorization error \(er)"
+                print(log)
+            }
+            if granted {
+                DispatchQueue.main.async(execute: {
+                    UIApplication.shared.registerForRemoteNotifications()
+                })
+            }
+        }
     }
 
     func setuoGoogle() {
@@ -48,9 +62,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc func rotated() {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-//            if UIApplication.topViewController() is ProductViewController {
-//                fatalError("Bug rotation")
-//            }
+            if UIApplication.topViewController() is WalletViewController {
+                fatalError("Bug rotation")
+            }
         }
 
         if UIDevice.current.orientation.isPortrait {
@@ -65,3 +79,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+
+        let userInfo = response.notification.request.content.userInfo
+    }
+}
