@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>129260284839-j6t06s5eqsim1pf4bnuku9tigfn40nj3.apps.googleusercontent.com</string>
+	<string>129260284839-ef8097710s4eu4dr73okq0coj8c3rtj8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.129260284839-j6t06s5eqsim1pf4bnuku9tigfn40nj3</string>
+	<string>com.googleusercontent.apps.129260284839-ef8097710s4eu4dr73okq0coj8c3rtj8</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAkjBdqQVKbHakQ2p75NLpAJGwW_JcMfik</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.skillbox.rent</string>
+	<string>ru.skillbox.rent</string>
 	<key>PROJECT_ID</key>
 	<string>qa-maps-app</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:129260284839:ios:ad6c3a38d821b9043da482</string>
+	<string>1:129260284839:ios:1dd66383de97967c3da482</string>
 </dict>
 </plist>
