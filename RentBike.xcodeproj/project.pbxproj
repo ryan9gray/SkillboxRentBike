@@ -108,6 +108,7 @@
 		25A991D1261DDD5500F2087C /* ErrorNotificationAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991CA261DDD5500F2087C /* ErrorNotificationAlert.swift */; };
 		25A991D2261DDD5500F2087C /* WindowAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991CB261DDD5500F2087C /* WindowAlertPresenter.swift */; };
 		25A991D7261DDE3000F2087C /* HairLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991D6261DDE3000F2087C /* HairLineView.swift */; };
+		25A991E92621DB8100F2087C /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A991E82621DB8100F2087C /* FAQViewController.swift */; };
 		25B8B7D5261776D400A65CB3 /* RideService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B8B7D4261776D400A65CB3 /* RideService.swift */; };
 		4D6B99318ED2D89A157414B8 /* Pods_RentBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D9F9CE4FFFB10005465F8 /* Pods_RentBike.framework */; };
 /* End PBXBuildFile section */
@@ -239,6 +240,8 @@
 		25A991CA261DDD5500F2087C /* ErrorNotificationAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNotificationAlert.swift; sourceTree = "<group>"; };
 		25A991CB261DDD5500F2087C /* WindowAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowAlertPresenter.swift; sourceTree = "<group>"; };
 		25A991D6261DDE3000F2087C /* HairLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HairLineView.swift; sourceTree = "<group>"; };
+		25A991E4261DF48A00F2087C /* RentBike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RentBike.entitlements; sourceTree = "<group>"; };
+		25A991E82621DB8100F2087C /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		25B8B7D4261776D400A65CB3 /* RideService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideService.swift; sourceTree = "<group>"; };
 		2D6A7CF19591FFF7C2E5E086 /* Pods-RentBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.release.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.release.xcconfig"; sourceTree = "<group>"; };
 		88AC134544A9C010CD0A2BB0 /* Pods-RentBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RentBike.debug.xcconfig"; path = "Target Support Files/Pods-RentBike/Pods-RentBike.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +309,7 @@
 		25203C0425EA5F14000BE950 /* RentBike */ = {
 			isa = PBXGroup;
 			children = (
+				25A991E4261DF48A00F2087C /* RentBike.entitlements */,
 				25203C0525EA5F14000BE950 /* AppDelegate.swift */,
 				25203C8A25EA62B2000BE950 /* ApplicationFlow.swift */,
 				25203CAE25EA62BB000BE950 /* Scene */,
@@ -530,6 +534,7 @@
 				25312497260F5F0100C163E2 /* MenuFlow.swift */,
 				257AE851260E3F1200660A1A /* WalletViewController.swift */,
 				257AE856260E3F5D00660A1A /* PromoViewController.swift */,
+				25A991E82621DB8100F2087C /* FAQViewController.swift */,
 			);
 			path = MenuVC;
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 				25A991D1261DDD5500F2087C /* ErrorNotificationAlert.swift in Sources */,
 				25203C7D25EA6262000BE950 /* UITableView.swift in Sources */,
 				25203CC825EA655F000BE950 /* Result.swift in Sources */,
+				25A991E92621DB8100F2087C /* FAQViewController.swift in Sources */,
 				25203CA425EA62B2000BE950 /* AuthFlow.swift in Sources */,
 				25A991CC261DDD5500F2087C /* AnonNotificationAlert.swift in Sources */,
 				25203C9F25EA62B2000BE950 /* SkyFloatingLabelTextField.swift in Sources */,
@@ -1042,6 +1048,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RentBike/RentBike.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
@@ -1065,6 +1072,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RentBike/RentBike.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;

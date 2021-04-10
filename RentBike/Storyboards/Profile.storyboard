@@ -129,7 +129,7 @@
                                             <constraint firstAttribute="height" constant="48" id="zw0-v1-EmB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="qfX-Yu-F07" id="27e-En-pRX"/>
                                         </connections>
@@ -181,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AtT-iN-UQc">
-                                <rect key="frame" x="24" y="187" width="366" height="164"/>
+                                <rect key="frame" x="24" y="411" width="366" height="164"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Promocode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab7-RZ-HV7">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="48"/>
@@ -226,7 +226,7 @@
                             <constraint firstItem="M7b-MR-Dk3" firstAttribute="trailing" secondItem="AtT-iN-UQc" secondAttribute="trailing" constant="24" id="I7g-Ae-Qcj"/>
                             <constraint firstItem="AtT-iN-UQc" firstAttribute="leading" secondItem="is9-dm-OqP" secondAttribute="leading" constant="24" id="UmC-oM-rYb"/>
                             <constraint firstItem="AtT-iN-UQc" firstAttribute="centerX" secondItem="is9-dm-OqP" secondAttribute="centerX" id="fad-Jp-nFP"/>
-                            <constraint firstItem="AtT-iN-UQc" firstAttribute="centerY" secondItem="is9-dm-OqP" secondAttribute="centerY" multiplier="0.6" priority="998" id="n04-D5-U2I"/>
+                            <constraint firstItem="AtT-iN-UQc" firstAttribute="centerY" secondItem="is9-dm-OqP" secondAttribute="centerY" multiplier="1.1" priority="998" id="n04-D5-U2I"/>
                         </constraints>
                     </view>
                     <connections>
@@ -290,6 +290,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Su6-Ux-nPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="311.59420289855075" y="-50.223214285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Ze-F5-D3q">
+            <objects>
+                <viewController storyboardIdentifier="FAQViewController" id="USu-GT-Jgy" customClass="FAQViewController" customModule="RentBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCu-G2-BqB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HIy-YK-lR1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="142"/>
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сколько стоит одна поездка на велосипеде? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-oR-Ufg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UE-aO-QFv">
+                                        <rect key="frame" x="0.0" y="30.5" width="414" height="0.0"/>
+                                        <string key="text">Стоимость поездки рассчитывается по формуле: S = (TotalTime-Waiting)*1rub, где TotalTime — это общее время бронирования, Waiting — ожидание (которое не может равняться больше 10 минут). TotalTime всегда больше Waiting.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как начать поездку? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M68-3d-Imc">
+                                        <rect key="frame" x="0.0" y="40.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите подходящий велосипед на карте и нажмите кнопку «Start». После этого у вас появится возможность разблокировать замок. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-RJ-V9D">
+                                        <rect key="frame" x="0.0" y="71" width="414" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Где можно совершать поездки?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdE-l0-t1h">
+                                        <rect key="frame" x="0.0" y="81" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYr-Je-Kfq">
+                                        <rect key="frame" x="0.0" y="111.5" width="414" height="0.0"/>
+                                        <string key="text">Совершать поездки можно где угодно. Главное, завершить аренду в районе Купертино в зоне, выделенной зеленым цветом. 
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как пополнить кошелек?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqV-Ea-PtU">
+                                        <rect key="frame" x="0.0" y="121.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcW-Mi-ySk">
+                                        <rect key="frame" x="0.0" y="142" width="414" height="0.0"/>
+                                        <string key="text">Перейдите в пункт меню «‎Кошелек», введите сумму, на которую вы хотите пополнить кошелек, и нажмите кнопку «Отправить». Менеджер направит на вашу почту счет для оплаты.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4dx-wO-gYL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HIy-YK-lR1" firstAttribute="leading" secondItem="4dx-wO-gYL" secondAttribute="leading" id="KgT-qL-w0Y"/>
+                            <constraint firstItem="HIy-YK-lR1" firstAttribute="top" secondItem="4dx-wO-gYL" secondAttribute="top" id="VQ0-NX-BKh"/>
+                            <constraint firstItem="4dx-wO-gYL" firstAttribute="trailing" secondItem="HIy-YK-lR1" secondAttribute="trailing" id="alt-vt-v7b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aql-J3-v10"/>
+                    <connections>
+                        <outlet property="a1" destination="1UE-aO-QFv" id="di5-NQ-zeg"/>
+                        <outlet property="a2" destination="nxy-RJ-V9D" id="QPg-7X-uuD"/>
+                        <outlet property="a3" destination="tYr-Je-Kfq" id="pmC-Dh-CFO"/>
+                        <outlet property="a4" destination="gcW-Mi-ySk" id="yBk-cB-iXr"/>
+                        <outlet property="q1" destination="ayz-oR-Ufg" id="1vM-Cr-FPN"/>
+                        <outlet property="q2" destination="M68-3d-Imc" id="Ada-i2-17Q"/>
+                        <outlet property="q3" destination="SdE-l0-t1h" id="fNf-8a-Vp3"/>
+                        <outlet property="q4" destination="CqV-Ea-PtU" id="a6E-dV-60d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4F-Up-6sC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="609"/>
         </scene>
     </scenes>
     <resources>

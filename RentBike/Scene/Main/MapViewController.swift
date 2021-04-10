@@ -18,6 +18,38 @@ class MapViewController: UIViewController {
     @IBOutlet private var locationButton: RoundEdgeButton!
     @IBOutlet var actButtons: [RoundEdgeButton]!
 
+    private var timer: Timer?
+    private let timeFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [ .minute, .second ]
+        formatter.zeroFormattingBehavior = .pad
+        return formatter
+    }()
+    @IBOutlet var timerLabel: UILabel!
+    private var seconds: TimeInterval = 0.0 {
+        didSet {
+            let time = timeFormatter.string(from: seconds)
+            timerLabel.text = time
+        }
+    }
+    func startTimer() {
+        seconds = 0.0
+        timer = Timer.scheduledTimer(
+            timeInterval: 1,
+            target: self,
+            selector: #selector(updateCounter),
+            userInfo: nil,
+            repeats: true
+        )
+    }
+    @objc func updateCounter() {
+        seconds += 1
+    }
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+        timerLabel.text = ""
+    }
     private var bikes: [BikeAnnotataion] = []
     private var currentLocation: CLLocation? {
         didSet {
@@ -26,6 +58,14 @@ class MapViewController: UIViewController {
                 output.sendMyLocation(location)
             }
 			locationDidUpdated(location)
+        }
+    }
+
+    var countToCrash: Int = 0 {
+        didSet {
+            if countToCrash >= 20 {
+                fatalError()
+            }
         }
     }
 
@@ -88,6 +128,7 @@ class MapViewController: UIViewController {
         output.light { bool in
             self.updateButtons()
         }
+        countToCrash += 1
     }
 
     @IBAction func lockTap(_ sender: Any) {

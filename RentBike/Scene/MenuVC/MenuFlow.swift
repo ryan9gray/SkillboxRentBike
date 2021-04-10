@@ -22,7 +22,11 @@ struct MenuFlow {
 
         from.present(vc, animated: true, completion: nil)
     }
+    func faq(from: UIViewController) {
+        let vc = FAQViewController.instantiate(fromStoryboard: .profile)
 
+        from.present(vc, animated: true, completion: nil)
+    }
     func promo(from: UIViewController) {
         let vc = PromoViewController.instantiate(fromStoryboard: .profile)
         vc.output = .init(promocode: postPromo)

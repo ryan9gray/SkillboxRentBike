@@ -16,6 +16,7 @@ protocol MenuRoutingLogic {
     func openRide()
     func openWallet()
     func openPromo()
+    func openFaq()
 }
 
 protocol MenuDataPassing {
@@ -39,5 +40,9 @@ class MenuRouter: MenuRoutingLogic, MenuDataPassing {
     func openPromo() {
         let flow = MenuFlow()
         flow.promo(from: viewController)
+    }
+    func openFaq() {
+        let flow = MenuFlow()
+        flow.faq(from: viewController)
     }
 }

@@ -13,12 +13,18 @@ class MapFlow {
     let service = NetworkService.shared
     let rideService = RideService()
     let controller = MapViewController.instantiate(fromStoryboard: .main)
-
+	let notificationService = NotificationService()
     var bike: Bike?
     var startAnotation: BikeAnnotataion?
 
     func start() {
         rootVC.setViewControllers([ createInitialViewController() ], animated: false)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(sendCoord),
+            name: NSNotification.Name.SendCoord,
+            object: nil
+        )
     }
     
     lazy var initialViewController: DrawerController = {
@@ -67,18 +73,20 @@ class MapFlow {
         } else {
             switch bike.status {
                 case .booked, .free:
-                    NotificationService.shared.startTimer()
+                    notificationService.startTimer()
+                    controller.startTimer()
                     bike.status = .inProgress
                     startAnotation = annotation
                     rideService.rideStart(id: bike.id)
                 case .inProgress:
                     if !bike.lightOn {
-                        NotificationService.shared.stopTimer()
+                        notificationService.stopTimer()
                     }
                     let anot = startAnotation?.coordinate ?? annotation.coordinate
                     bike.status = .free
                     rideService.rideFinish(.init(bikeId: bike.id, distance: Int(distanse(coordinate: anot)!)))
                     Profile.current?.lastBike = bike
+                    controller.stopTimer()
             }
         }
         controller.updateButtons()
@@ -110,9 +118,13 @@ class MapFlow {
     func moved(coordinate: CLLocation) {
         bike?.longitude = coordinate.coordinate.longitude
         bike?.latitude = coordinate.coordinate.latitude
+
+    }
+    @objc func sendCoord() {
+        guard let bike = bike else { return }
         service.move(coordinate: .init(
-                        latitude: coordinate.coordinate.latitude,
-                        longitude: coordinate.coordinate.longitude
+            latitude: bike.latitude,
+            longitude: bike.longitude
         ))
     }
 

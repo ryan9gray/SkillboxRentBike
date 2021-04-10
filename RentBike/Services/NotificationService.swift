@@ -10,7 +10,7 @@ import UIKit
 
 class NotificationService {
 
-    static let shared = NotificationService()
+    //static let shared = NotificationService()
     private var timer: Timer? = Timer()
     private let limit: CGFloat =  30.0
 
@@ -38,5 +38,6 @@ class NotificationService {
 
     func sendPush() {
         ApplicationFlow.shared.alertPresenter.show(alert: BasicNotificationAlert(text: "Водите осторожно"))
+        NotificationCenter.default.post(name: NSNotification.Name.SendCoord, object: nil)
     }
 }

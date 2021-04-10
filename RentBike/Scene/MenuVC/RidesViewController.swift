@@ -16,7 +16,6 @@ class RidesViewController: UIViewController {
         }
     }
 
-
     struct Input {
         var getItems: (_ completion: @escaping ([String]) -> Void) -> Void
     }

@@ -39,7 +39,7 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
         router?.openPromo()
     }
     @IBAction func faqTap(_ sender: Any) {
-
+        router?.openFaq()
     }
     
     // MARK: Object lifecycle

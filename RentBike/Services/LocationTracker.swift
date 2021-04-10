@@ -61,5 +61,6 @@ extension LocationTracker: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
+        //fatalError()
     }
 }

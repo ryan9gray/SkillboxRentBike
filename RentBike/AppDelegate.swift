@@ -73,9 +73,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-//        if UIApplication.topViewController() is DiscountViewController {
-//            fatalError()
-//        }
+        if UIApplication.topViewController() is PromoViewController {
+            fatalError()
+        }
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("Background")
+    }
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("Terminate")
+    }
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print("Foreground")
+    }
+    // Handle remote notification registration.
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
+
+    }
+
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // The token is not currently available.
+        print("Remote notification support is unavailable due to error: \(error.localizedDescription)")
+
     }
 }
 

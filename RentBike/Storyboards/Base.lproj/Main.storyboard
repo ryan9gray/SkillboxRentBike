@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-a7-ieh">
-                                <rect key="frame" x="20" y="92" width="120" height="120"/>
+                                <rect key="frame" x="0.0" y="92" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="TtR-F2-hJn"/>
                                     <constraint firstAttribute="width" constant="120" id="wzp-vQ-Z5s"/>
@@ -42,7 +42,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVE-hW-NTQ">
-                                <rect key="frame" x="20" y="804" width="63" height="34"/>
+                                <rect key="frame" x="0.0" y="804" width="63" height="34"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <state key="normal" title="Выйти"/>
                                 <connections>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-hR-ui1">
-                                <rect key="frame" x="20" y="236" width="84.5" height="103"/>
+                                <rect key="frame" x="0.0" y="236" width="84.5" height="103"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кошелек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxB-AA-PFm">
                                         <rect key="frame" x="0.0" y="0.0" width="84.5" height="22"/>
@@ -79,7 +79,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KDx-4Q-LTa">
-                                <rect key="frame" x="20" y="363" width="185" height="185"/>
+                                <rect key="frame" x="0.0" y="363" width="185" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eBJ-HN-S2a">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="185"/>
@@ -220,14 +220,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="S2J-hR-ui1" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="BvI-VD-47s"/>
+                            <constraint firstItem="fX4-a7-ieh" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leading" id="CL0-B3-JGo"/>
                             <constraint firstItem="fX4-a7-ieh" firstAttribute="top" secondItem="gyg-xK-HZ2" secondAttribute="bottom" constant="48" id="FuF-WE-M4g"/>
-                            <constraint firstItem="IVE-hW-NTQ" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="GUR-tb-NL0"/>
-                            <constraint firstItem="KDx-4Q-LTa" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="Hgz-rj-tgO"/>
                             <constraint firstItem="S2J-hR-ui1" firstAttribute="top" secondItem="fX4-a7-ieh" secondAttribute="bottom" constant="24" id="Pjl-fe-m8h"/>
+                            <constraint firstItem="S2J-hR-ui1" firstAttribute="leading" secondItem="fX4-a7-ieh" secondAttribute="leading" id="V0C-RQ-j3w"/>
                             <constraint firstItem="KDx-4Q-LTa" firstAttribute="top" secondItem="S2J-hR-ui1" secondAttribute="bottom" constant="24" id="Z94-vq-qow"/>
+                            <constraint firstItem="IVE-hW-NTQ" firstAttribute="leading" secondItem="fX4-a7-ieh" secondAttribute="leading" id="cQh-7q-UXr"/>
                             <constraint firstItem="eLd-Yd-7ME" firstAttribute="top" secondItem="IVE-hW-NTQ" secondAttribute="bottom" constant="24" id="ctn-7x-FWf"/>
-                            <constraint firstItem="fX4-a7-ieh" firstAttribute="leading" secondItem="aEw-aL-Co9" secondAttribute="leadingMargin" id="gXf-P1-iFO"/>
+                            <constraint firstItem="KDx-4Q-LTa" firstAttribute="leading" secondItem="fX4-a7-ieh" secondAttribute="leading" id="fAd-0q-zlY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -281,11 +281,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBU-c0-lUk">
                                 <rect key="frame" x="0.0" y="796" width="414" height="100"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr8-72-ctV">
+                                        <rect key="frame" x="202" y="0.0" width="10.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-SD-UFp">
-                                        <rect key="frame" x="79" y="0.0" width="256" height="100"/>
+                                        <rect key="frame" x="79" y="0.0" width="256" height="130"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejv-9K-meH" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="18" width="64" height="64"/>
+                                                <rect key="frame" x="0.0" y="33" width="64" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="856-xd-2sg"/>
@@ -307,7 +313,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-q8-A9e" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
-                                                <rect key="frame" x="64" y="18" width="64" height="64"/>
+                                                <rect key="frame" x="64" y="33" width="64" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CBV-q8-A9e" secondAttribute="height" multiplier="1:1" id="AFl-eC-hq3"/>
@@ -329,7 +335,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdI-IT-lsb" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
-                                                <rect key="frame" x="128" y="18" width="64" height="64"/>
+                                                <rect key="frame" x="128" y="33" width="64" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="0oA-Ec-ue4"/>
@@ -351,7 +357,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1c-wW-4dN" customClass="RoundEdgeButton" customModule="RentBike" customModuleProvider="target">
-                                                <rect key="frame" x="192" y="18" width="64" height="64"/>
+                                                <rect key="frame" x="192" y="33" width="64" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="3gK-W1-dFB"/>
@@ -377,11 +383,27 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="rn0-SD-UFp" firstAttribute="centerX" secondItem="XBU-c0-lUk" secondAttribute="centerX" id="AcQ-dn-O89">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="-100"/>
+                                    </constraint>
                                     <constraint firstItem="rn0-SD-UFp" firstAttribute="top" secondItem="XBU-c0-lUk" secondAttribute="top" id="Q7h-yp-5lb"/>
-                                    <constraint firstAttribute="bottom" secondItem="rn0-SD-UFp" secondAttribute="bottom" id="TBz-T8-i8T"/>
+                                    <constraint firstAttribute="bottom" secondItem="rn0-SD-UFp" secondAttribute="bottom" constant="-30" id="TBz-T8-i8T"/>
+                                    <constraint firstItem="wr8-72-ctV" firstAttribute="centerX" secondItem="XBU-c0-lUk" secondAttribute="centerX" id="cZ2-I9-aGN"/>
+                                    <constraint firstItem="wr8-72-ctV" firstAttribute="top" secondItem="XBU-c0-lUk" secondAttribute="top" id="pVq-yO-Glh"/>
                                     <constraint firstAttribute="height" constant="100" id="ys9-53-WD3"/>
                                     <constraint firstItem="rn0-SD-UFp" firstAttribute="centerX" secondItem="XBU-c0-lUk" secondAttribute="centerX" id="zGx-FS-BOT"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AcQ-dn-O89"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="AcQ-dn-O89"/>
+                                        <exclude reference="zGx-FS-BOT"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -402,6 +424,7 @@
                         <outlet property="locationButton" destination="E1c-wW-4dN" id="pIS-Zf-tOK"/>
                         <outlet property="lockButton" destination="ejv-9K-meH" id="dpi-Kj-oDa"/>
                         <outlet property="mapView" destination="y48-IC-xNP" id="HO6-DU-0Ha"/>
+                        <outlet property="timerLabel" destination="wr8-72-ctV" id="UaM-hf-WJX"/>
                         <outletCollection property="actButtons" destination="ejv-9K-meH" collectionClass="NSMutableArray" id="S8B-xf-LmA"/>
                         <outletCollection property="actButtons" destination="CBV-q8-A9e" collectionClass="NSMutableArray" id="DyW-6G-jGE"/>
                         <outletCollection property="actButtons" destination="VdI-IT-lsb" collectionClass="NSMutableArray" id="NaE-uo-2aF"/>
