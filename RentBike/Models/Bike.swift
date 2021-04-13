@@ -25,6 +25,17 @@ class Bike: Mappable {
 		case free = 0
         case booked = 1
         case inProgress = 2
+
+        var icon: UIImage? {
+            switch self {
+                case .booked:
+                    return UIImage(named: "booked")
+                case .free:
+                    return UIImage(named: "start")
+                case .inProgress:
+                    return UIImage(named: "finish")
+            }
+        }
     }
 
     var coordinate: CLLocation {

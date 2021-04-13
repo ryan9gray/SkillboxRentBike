@@ -35,8 +35,7 @@ class MapFlow {
     /// Утечка памяти
     private func createInitialViewController() -> UIViewController {
         controller.input = .init(
-            bike: { self.bike },
-            load: loadInitialData
+            bike: { self.bike }
         )
         // утечка памяти
         controller.output = .init(
@@ -64,21 +63,31 @@ class MapFlow {
         if dist > BikeProfile.maxDistanse {
             if bike.status == .booked {
                 bike.status = .free
+                controller.stopTimer()
                 rideService.book(id: bike.id, start: false)
             } else {
             	rideService.book(id: bike.id, start: true)
             	bike.status = .booked
+                controller.startTimer()
             	controller.showInvalidDistanceAlert()
             }
         } else {
             switch bike.status {
                 case .booked, .free:
+                    guard bike.isUnlock else {
+                        controller.showAlert(title: nil, message: "Нужно открыть замок")
+                        return
+                    }
                     notificationService.startTimer()
                     controller.startTimer()
                     bike.status = .inProgress
                     startAnotation = annotation
                     rideService.rideStart(id: bike.id)
                 case .inProgress:
+                    guard !bike.isUnlock else {
+                        controller.showAlert(title: nil, message: "Нужно закрыть замок")
+                        return
+                    }
                     if !bike.lightOn {
                         notificationService.stopTimer()
                     }
@@ -139,24 +148,6 @@ class MapFlow {
                 self.bike = bike
                 self.controller.setBike(bike)
             }
-        }
-    }
-
-    func loadInitialData(_ completion: @escaping ([BikeAnnotataion]) -> Void) {
-        guard
-            let fileName = Bundle.main.url(forResource: "Bikes", withExtension: "geojson"),
-            let artworkData = try? Data(contentsOf: fileName)
-        else { return completion([]) }
-
-        do {
-            let features = try MKGeoJSONDecoder()
-                .decode(artworkData)
-                .compactMap { $0 as? MKGeoJSONFeature }
-            let validWorks = features.compactMap(BikeAnnotataion.init)
-            completion(validWorks)
-        } catch {
-            print("Unexpected error: \(error).")
-            return completion([])
         }
     }
 }

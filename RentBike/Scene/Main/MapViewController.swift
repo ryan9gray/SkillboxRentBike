@@ -45,6 +45,7 @@ class MapViewController: UIViewController {
     @objc func updateCounter() {
         seconds += 1
     }
+    
     func stopTimer() {
         timer?.invalidate()
         timer = nil
@@ -104,12 +105,9 @@ class MapViewController: UIViewController {
         var light: (_ completion: @escaping (Bool) -> Void) -> Void
         var sendMyLocation: (CLLocation) -> (Void)
     }
-
     struct Input {
         var bike: () -> Bike?
-        var load: (_ completion: @escaping ([BikeAnnotataion]) -> Void) -> Void
     }
-    
     var input: Input!
     var output: Output!
 
@@ -174,9 +172,9 @@ class MapViewController: UIViewController {
         guard let bike = input.bike() else { return }
         lightButton.isSelected = bike.lightOn
         lockButton.isSelected = bike.isUnlock
-        finishButton.isSelected = bike.inProgress
         lightButton.isHidden = !bike.inProgress
         lockButton.isHidden = !bike.inProgress
+        finishButton.setImage(bike.status.icon, for: .normal)
     }
 
     private func setupMap() {
@@ -211,18 +209,7 @@ class MapViewController: UIViewController {
     }
 
     func showInvalidDistanceAlert() {
-        let alert = UIAlertController(
-            title: "Booked",
-            message: "Please enter a valid distance in kilometers",
-            preferredStyle: .alert
-        )
-        let okAction = UIAlertAction(
-            title: "OK",
-            style: .default,
-            handler: nil
-        )
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
+        showAlert(title: "Booked", message: "Please enter a valid distance in kilometers, waiting time 10 minutes")
     }
 }
 

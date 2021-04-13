@@ -101,10 +101,10 @@ class MenuViewController: UIViewController, MenuDisplayLogic {
 
     func updateLabels(profile: Profile) {
         avatarImageView.setImageWithSD(from: profile.avatar)
-        walletLabel.text = "Кошелек \(profile.balance)"
-        calLabel.text = "Калории \(profile.calories)"
-        distansLabel.text = "Пробег \(profile.distance)"
-        ridesLabel.text = "Поездки \(profile.rides.count)"
+        walletLabel.text = "wallet".localized + " \(profile.balance)"
+        calLabel.text = "cal".localized + " \(profile.calories)"
+        distansLabel.text = "distance".localized + " \(profile.distance)"
+        ridesLabel.text = "rides".localized + " \(profile.rides.count)"
     }
 
 }
