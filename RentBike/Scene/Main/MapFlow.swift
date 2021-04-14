@@ -74,10 +74,10 @@ class MapFlow {
         } else {
             switch bike.status {
                 case .booked, .free:
-                    guard bike.isUnlock else {
-                        controller.showAlert(title: nil, message: "Нужно открыть замок")
-                        return
-                    }
+//                    guard bike.isUnlock else {
+//                        controller.showAlert(title: nil, message: "Нужно открыть замок")
+//                        return
+//                    }
                     notificationService.startTimer()
                     controller.startTimer()
                     bike.status = .inProgress

@@ -1051,7 +1051,7 @@
 				CODE_SIGN_ENTITLEMENTS = RentBike/RentBike.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1076,7 +1076,7 @@
 				CODE_SIGN_ENTITLEMENTS = RentBike/RentBike.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = "$(SRCROOT)/RentBike/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
